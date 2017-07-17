@@ -1,4 +1,4 @@
-# I’m CMS-less and it feels great.
+# CMS-less, and it feels great.
 * front-end dev
 * productivity
 
@@ -18,7 +18,7 @@ Middleman was by far my favorite of the static-site generators — ruby-based li
 
 So, with the help of [markdown-loader](https://www.npmjs.com/package/markdown-loader) that’s what I ended up doing.
 
-Since I try to keep my “Work” page pretty curated, there’s not much to track there. It’s not hard to simply update the Vue component to grab another markdown file when I decide to add another one. That file looks like this:
+Since I try to keep my “Work” page pretty curated, it’s not hard to simply update the Vue component to grab another markdown file when I finish writing one. That file looks like this:
 
 ```
 <script>

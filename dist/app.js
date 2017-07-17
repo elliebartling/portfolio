@@ -15743,12 +15743,16 @@ return zhTw;
 
 module.exports = [
 	{
-		"date": "2017-07-17T01:26:29.000Z",
+		"date": "2017-07-12T04:33:37.000Z",
+		"path": "07-16-currently-reading-the-blank-slate.md"
+	},
+	{
+		"date": "2017-07-02T04:19:44.000Z",
 		"path": "07-16-cms-less-and-it-feels-so-right.md"
 	},
 	{
-		"date": "2017-07-17T00:23:34.000Z",
-		"path": "07-16-currently-reading-the-blank-slate.md"
+		"date": "2017-07-17T04:52:25.000Z",
+		"path": "07-16-should-designers-learn-to-code.md"
 	}
 ];
 
@@ -31736,7 +31740,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title"
   }, [_vm._v("Hi, I’m Ellen")]), _vm._v(" "), _c('h4', {
     staticClass: "subtitle"
-  }, [_vm._v("interaction designer + front-end developer")]), _vm._v(" "), _c('p', [_vm._v("I help organizations engage their users and reinforce their brands through interactive design and web technology. I'm a geek for all things design, cognitive science, user research, front-end web tech, and dogs.")]), _vm._v(" "), _c('p', [_vm._v("Currently, I work with an amazing team at an Austin, TX creative agency called "), _c('a', {
+  }, [_vm._v("interaction designer + front-end developer")]), _vm._v(" "), _c('p', [_vm._v("I help organizations engage their users and reinforce their brands through interactive design and web technology. I'm a huge geek for all things design, cognitive science, user research, economics, front-end web tech, and dogs.")]), _vm._v(" "), _c('p', [_vm._v("Currently, I work with an amazing team at an Austin, TX creative agency called "), _c('a', {
     attrs: {
       "target": "_blank",
       "href": "http://www.emergentorder.com"
@@ -31822,7 +31826,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       msg: 'Welcome to Your Vue.js App',
-      index: ['cat-merrick-studios', 'texas-millennial-institute',
+      index: [
+      // 'pacific-legal-foundation',
+      'cat-merrick-studios', 'texas-millennial-institute',
       // 'my-magic-mud',
       'social-evolution', 'at-the-fork-virtual-reality']
     };
@@ -31859,6 +31865,7 @@ var map = {
 	"./cat-merrick-studios.md": 141,
 	"./free-together.md": 146,
 	"./my-magic-mud.md": 147,
+	"./pacific-legal-foundation.md": 170,
 	"./social-evolution.md": 148,
 	"./texas-millennial-institute.md": 150
 };
@@ -31894,7 +31901,7 @@ module.exports = "/images/screen-5.jpg?c9476779400b95aa387299a46e16bcc4";
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<h1 id=\"cat-merrick-studios\">Cat Merrick Studios</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>branding</li>\n<li>front-end dev</li>\n</ul>\n<blockquote>\n<p><strong>Cat’s Evaluation:</strong><br>“I couldn&#39;t be happier. Expectations blown out of the water.”  </p>\n</blockquote>\n<p>UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — <em>on purpose.</em></p>\n<p>For me, it was an unfamiliar journey into a world that really hinges on the theme, “If you have to ask, you can’t afford it.”</p>\n<p>I was immediately drawn to Cat’s project — an online store for her new jewelry line — because of this dynamic. Cat herself is warm, open, friendly, brimming with creativity and gusto and tech-industry-like disruptiveness. It’s a huge part of her brand, her work, and her style. But the industry she’s about to disrupt is stark, minimalist, and has a bit of a “fuck you” attitude to outsiders and those who don’t immediately come across as “one of them.”</p>\n<p>What an awesome and interesting design challenge.</p>\n<p><img src=\"" + __webpack_require__(142) + "\" alt=\"\"></p>\n<h2 id=\"the-requirements\">The Requirements</h2>\n<ol>\n<li><p>Cat wanted to be able to showcase her products by type, but didn’t want her shop to feel too sparse by splitting things up into groups.</p>\n</li>\n<li><p>She wanted the site to be easy to understand and navigate, but not feel out of place among websites that adhered to extreme minimalism, sometimes at the expense of what we both recognized as usability best practices.</p>\n</li>\n<li><p>She wanted to be able to use gifs and videos as the “featured” image for products, which is a feature Shopify doesn’t support out of the box.</p>\n</li>\n<li><p>She wanted to have a password-protected wholesale version of some, but not all, of the products.</p>\n</li>\n<li><p>She needed to be able to maintain all of this on her own, with limited tech experience.</p>\n</li>\n</ol>\n<p><img src=\"" + __webpack_require__(143) + "\" alt=\"\"></p>\n<h2 id=\"the-designs\">The Designs</h2>\n<p>The first round of design included elements (above) with bold Geomanist font, dramatic diagonals, and interesting product photography. The basic elements of Cat’s in-progress brand were there — monochrome color scheme, focus on photography, geometric typeface — but it wasn’t quite right for her target audience. All of Cat’s pieces are hand-designed and individually crafted, and the big-box-store UX patterns had far too much of a “polished” and commercial feel.</p>\n<p>On the UX and tech side, we were running into other technology tetris challenges: Cat wanted to have a password-protected wholesale section, with separate pricing structures for her products, and at some point in the future was considering opening up a home goods line. For non-bulk buyers, was a “wholesale” nav item distracting? What was the best way to organize products into categories and subcategories, and what was the best way to accomplish that in Shopify (which, we discovered, has significant security limitations when pulling product info via AJAX)?</p>\n<p><img src=\"" + __webpack_require__(144) + "\" alt=\"\"></p>\n<p>Ultimately, we settled on a single-page design for the jewelry collection, split into sections. This felt like the best of both worlds: show the user all of Cat’s products to keep the page feeling full, but maintain organization and structure.</p>\n<p>To keep load times down, I implemented some AJAX to dynamically load the next section as the user scrolled. And to keep time-on-site up, I added another “infinite-scroll” script to the single product page, plus some javascript to make the product information “sticky”:</p>\n<p><img src=\"" + __webpack_require__(145) + "\" alt=\"\"></p>\n<p>Ultimately, I think what we built is going to be a huge success, and I can’t wait to see her line launch later this year.</p>\n";
+module.exports = "<h1 id=\"cat-merrick-studios\">Cat Merrick Studios</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>front-end dev</li>\n</ul>\n<blockquote>\n<p><strong>Cat’s Evaluation:</strong><br>“I couldn&#39;t be happier. Expectations blown out of the water.”  </p>\n</blockquote>\n<p>UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — <em>on purpose.</em></p>\n<p>Utterly baffling for me, a UX designer, whose entire job is about making things <strong>easy</strong> to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, “If you have to ask [how it works], you can’t afford it” — but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.</p>\n<p>I was totally hooked: Cat herself is warm, open, friendly, brimming with creativity and gusto and tech-industry-like disruptiveness. It’s a huge part of her brand, her work, and her style. But the industry she’s about to disrupt is stark, minimalist, and has a bit of a “fuck you” attitude to outsiders and those who don’t immediately come across as “one of them.”</p>\n<p>How do you marry those two totally different dynamics in a single website? What an awesome and fascinating design challenge.</p>\n<p><img src=\"" + __webpack_require__(142) + "\" alt=\"\">\n<em>An early in-situ wireframe.</em></p>\n<h3 id=\"the-requirements\">The Requirements</h3>\n<ol>\n<li><p>Cat wanted to be able to showcase her products by type, but didn’t want her shop to feel too sparse by splitting things up into groups.</p>\n</li>\n<li><p>She wanted the site to be easy to understand and navigate, but not feel out of place among websites that adhered to extreme minimalism, sometimes at the expense of what we both recognized as usability best practices.</p>\n</li>\n<li><p>She wanted to be able to use gifs and videos as the “featured” image for products, which is a feature Shopify doesn’t support out of the box.</p>\n</li>\n<li><p>She wanted to have a password-protected wholesale version of some, but not all, of the products.</p>\n</li>\n<li><p>She needed to be able to maintain all of this on her own, quickly and easily through the Shopify CMS. If at all possible, I wanted to avoid giving her something else to have to log into.</p>\n</li>\n</ol>\n<h3 id=\"challenges\">Challenges</h3>\n<p>The first round of design included elements (above) with bold Geomanist font, dramatic diagonals, and interesting product photography. The basic elements of Cat’s in-progress brand were there — monochrome color scheme, focus on photography, geometric typeface — but it wasn’t quite right for her target audience. All of Cat’s pieces are hand-designed and individually crafted, and the big-box-store UX patterns had far too much of a “polished” and commercial feel.</p>\n<p><img src=\"" + __webpack_require__(143) + "\" alt=\"\">\n<em>On the right path, but ultimately too commercial.</em></p>\n<p>On the UX and tech side, we were playing a long game of technology tetris: Cat needed to have a password-protected wholesale section, with separate pricing structures for her products, and at some point in the future was considering opening up a home goods line. But until then, we wanted to make sure the site didn’t feel empty or oddly organized. </p>\n<p>For non-bulk buyers, was a “wholesale” nav item distracting? What was the best way to organize products into categories and subcategories, and what was the best way to accomplish that in Shopify (which, we discovered, has significant security limitations when pulling product info via AJAX)? Because Cat was simultaneously designing and creating new products while we were designing and prototyping the site, the information architecture quickly became a sort of “chicken-and-egg” problem.</p>\n<p><img src=\"" + __webpack_require__(144) + "\" alt=\"\"></p>\n<h3 id=\"solutions\">Solutions</h3>\n<p>Ultimately, we settled on a single-page design for the jewelry collection, split into sections by Shopify sub-collections. This felt like the best of both worlds: show the user all of Cat’s products to keep the page feeling full, but maintain organization and structure. We tried a few different iterations of “filters” by various product attributes, but ultimately, there just weren’t enough products to filter by and they felt distracting. To keep load times down, I implemented some AJAX to dynamically load the next section as the user scrolled.</p>\n<p>Visually, we found our mark with Avenir Next, which had just the right amount of structure to feel classy without feeling overly minimalist (like straight Helvetica) or too commercial (like Geomanist). Thick black lines and bold black buttons kept key calls-to-action prominent and top-of-mind. Everything else was stripped down to give more prominence to the product photography (all screenshots are using sample photos).</p>\n<p>I was also able to add metafields to Shopify products so that Cat could upload gifs, embed YouTube links, add “product stories” — about the story behind each piece — and dictate different photos for different parts of the site.</p>\n<p>And to keep time-on-site up, I added another “infinite-scroll” feature to the single product page, plus some javascript to make the product information “sticky”:</p>\n<p><img src=\"" + __webpack_require__(145) + "\" alt=\"\"></p>\n<p>I’m particularly excited about how this individual product page turned out: because of limitations on how Shopify makes product data available, it took some figuring to add infinite scroll to individual product pages. As it turns out, unless you want to create your own Shopify Admin app, front-end scripts don’t have API access to product data — trying to pass (clean) product data to a Vue component turned out to be way more complicated than was worth it, and  in the end, I switched the project back to jQuery:</p>\n<pre><code>function getNextProduct () {\n    // Only get next product once\n    tryLoadingNextProduct = false\n\n    /* We&#39;ve used Shopify&#39;s built in &quot;next product in collection&quot; feature\n    /* to add a hidden &lt;a&gt; tag at the bottom of the current product\n    /* Now, we just need to find that next product link on this page */\n    var nextProductLink = $(&#39;#next-product&#39;)\n\n    if (nextProductLink.length &gt; 0) {\n      // Okay Ajax, do your thing.\n      $.get({ url: nextProductLink.find(&#39;a&#39;).attr(&#39;href&#39;) }, function (data) {\n\n     // Find the product container on the next page\n        var next = $(data).find(&#39;.product-container&#39;)\n        var id = next.data(&#39;product-id&#39;)\n        var nextTitle = $(`&lt;div class=&#39;next-product-header&#39;&gt;Next:&amp;nbsp;&lt;/div&gt;`)\n\n        // Append it to this page\n        nextTitle.insertAfter(&#39;.product-container:last-of-type&#39;)\n        nextTitle.append($(data).find(&#39;h1#product-title&#39;).html())\n\n        next.insertAfter(&#39;.next-product-header:last-of-type&#39;)\n\n        nextProductLink.removeAttr(&#39;id&#39;) // You&#39;re not the &quot;next&quot; anymore, link.\n\n        layoutProductImages() // Lay out images again\n\n        // Stickify the menu container\n        if ($(window).width() &gt; 768) {\n          $(&#39;.product-container:last-of-type .product-description-main&#39;).stick_in_parent()\n        }\n\n        // Swap out gross selectboxes for pretty ones\n        $(&#39;.selectify&#39;).select2({ width: &#39;auto&#39; })\n\n        $(&#39;select&#39;).on(&#39;select2:select&#39;, function(event) {\n          onSelectChange($(this))\n        })\n\n        getProductData(id)\n\n        tryLoadingNextProduct = true\n\n      })\n    }\n\n  }\n</code></pre><p>Ultimately, I think what we built is going to be a huge success, and I can’t wait to see her line launch later this year.</p>\n";
 
 /***/ }),
 /* 142 */
@@ -32170,6 +32177,7 @@ var map = {
 	"./07-16-cms-less-and-it-feels-so-right/screen-2.png": 119,
 	"./07-16-currently-reading-the-blank-slate.md": 160,
 	"./07-16-currently-reading-the-blank-slate/14316417206_4cc28f91a0_b.jpg": 168,
+	"./07-16-should-designers-learn-to-code.md": 169,
 	"./manifest.json": 118
 };
 function webpackContext(req) {
@@ -32192,7 +32200,7 @@ webpackContext.id = 158;
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<h1 id=\"i-m-cms-less-and-it-feels-great-\">I’m CMS-less and it feels great.</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I’m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem 😍, but honestly, I also love learning new things, and I’m always going to consider whatever’s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn’t love free hosting, right?), but that… was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for “Wordpress-light”, but it requires PHP, and I’d honestly rather write in my own favorite markdown editor than in a browser.</p>\n<p><img src=\"" + __webpack_require__(120) + "\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren’t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you’re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn’t jazzed about the number of plugins I needed in order to have multiple different kinds of “posts,” and ultimately, I found myself missing my webpack-based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"" + __webpack_require__(119) + "\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> 😬</p>\n<p>Middleman was by far my favorite of the static-site generators — ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to include Vue elements, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n<p>So, with the help of <a href=\"https://www.npmjs.com/package/markdown-loader\">markdown-loader</a> that’s what I ended up doing.</p>\n<p>Since I try to keep my “Work” page pretty curated, there’s not much to track there. It’s not hard to simply update the Vue component to grab another markdown file when I decide to add another one. That file looks like this:</p>\n<pre><code>&lt;script&gt;\nexport default {\n  name: &#39;hi&#39;,\n  data () {\n    return {\n      index: [\n        &#39;cat-merrick-studios&#39;,\n        &#39;texas-millennial-institute&#39;,\n        // &#39;my-magic-mud&#39;, // &lt;-- coming soon!\n        &#39;social-evolution&#39;,\n        &#39;at-the-fork-virtual-reality&#39;,\n        // &#39;free-together&#39;\n      ]\n    }\n  },\n  computed: {\n    work: function() {\n      var app = this\n      var work = []\n\n      for (var i in app.index) {\n        var s = require(`../../../work/${app.index[i]}.md`)\n\n        // Fix relative path issues with Marked&#39;s image import\n        var w = s.replace(new RegExp(&#39;\\/images&#39;, &#39;g&#39;), &#39;images&#39;)\n\n        work[i] = { index: i, slug: app.index[i], body: w }\n      }\n      console.log(work)\n      return work\n    }\n  },\n  methods: {}\n}\n&lt;/script&gt;\n</code></pre><p>The blog is a little trickier: you don’t want your client-side javascript to be able to traverse a directory (for obvious security reasons), but there’s going to be enough content there that it’s going to get annoying to track individually.</p>\n<p>Since you <em>can</em> ask Webpack to do a little file-requiring during the build, as long as you explicitly tell it which files to grab, I wrote a simple node script that compiles a JSON directory of the blog posts and iterate through that during build:</p>\n<pre><code>var fs = require(&#39;graceful-fs&#39;)\nvar path = require(&#39;path&#39;)\nvar posts = []\n\nvar list = fs.readdirSync(&#39;./blog&#39;)\n\nfor (p in list) {\n  var filename = list[p]\n\n  // Only get markdown files, not folders\n  if (path.extname(filename) == &#39;.md&#39;) {\n    var stats = fs.statSync(&#39;./blog/&#39; + filename)\n    var date = stats.mtime\n\n    posts[p] = {}\n    posts[p].date = date\n    posts[p].path = filename\n  }\n}\n\nfs.writeFileSync(&#39;blog/manifest.json&#39;, JSON.stringify(posts))\n</code></pre><p>And, tada! Simple, fast, blog-aware-ish, vue-based site that lives on GitHub Pages.</p>\n<p>Next up, I’d like to add a blog-aware URL structure for Vue Router, so each post and work item can have it’s own permalink.</p>\n";
+module.exports = "<h1 id=\"cms-less-and-it-feels-great-\">CMS-less, and it feels great.</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I’m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem 😍, but honestly, I also love learning new things, and I’m always going to consider whatever’s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn’t love free hosting, right?), but that… was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for “Wordpress-light”, but it requires PHP, and I’d honestly rather write in my own favorite markdown editor than in a browser.</p>\n<p><img src=\"" + __webpack_require__(120) + "\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren’t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you’re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn’t jazzed about the number of plugins I needed in order to have multiple different kinds of “posts,” and ultimately, I found myself missing my webpack-based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"" + __webpack_require__(119) + "\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> 😬</p>\n<p>Middleman was by far my favorite of the static-site generators — ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to include Vue elements, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n<p>So, with the help of <a href=\"https://www.npmjs.com/package/markdown-loader\">markdown-loader</a> that’s what I ended up doing.</p>\n<p>Since I try to keep my “Work” page pretty curated, it’s not hard to simply update the Vue component to grab another markdown file when I finish writing one. That file looks like this:</p>\n<pre><code>&lt;script&gt;\nexport default {\n  name: &#39;hi&#39;,\n  data () {\n    return {\n      index: [\n        &#39;cat-merrick-studios&#39;,\n        &#39;texas-millennial-institute&#39;,\n        // &#39;my-magic-mud&#39;, // &lt;-- coming soon!\n        &#39;social-evolution&#39;,\n        &#39;at-the-fork-virtual-reality&#39;,\n        // &#39;free-together&#39;\n      ]\n    }\n  },\n  computed: {\n    work: function() {\n      var app = this\n      var work = []\n\n      for (var i in app.index) {\n        var s = require(`../../../work/${app.index[i]}.md`)\n\n        // Fix relative path issues with Marked&#39;s image import\n        var w = s.replace(new RegExp(&#39;\\/images&#39;, &#39;g&#39;), &#39;images&#39;)\n\n        work[i] = { index: i, slug: app.index[i], body: w }\n      }\n      console.log(work)\n      return work\n    }\n  },\n  methods: {}\n}\n&lt;/script&gt;\n</code></pre><p>The blog is a little trickier: you don’t want your client-side javascript to be able to traverse a directory (for obvious security reasons), but there’s going to be enough content there that it’s going to get annoying to track individually.</p>\n<p>Since you <em>can</em> ask Webpack to do a little file-requiring during the build, as long as you explicitly tell it which files to grab, I wrote a simple node script that compiles a JSON directory of the blog posts and iterate through that during build:</p>\n<pre><code>var fs = require(&#39;graceful-fs&#39;)\nvar path = require(&#39;path&#39;)\nvar posts = []\n\nvar list = fs.readdirSync(&#39;./blog&#39;)\n\nfor (p in list) {\n  var filename = list[p]\n\n  // Only get markdown files, not folders\n  if (path.extname(filename) == &#39;.md&#39;) {\n    var stats = fs.statSync(&#39;./blog/&#39; + filename)\n    var date = stats.mtime\n\n    posts[p] = {}\n    posts[p].date = date\n    posts[p].path = filename\n  }\n}\n\nfs.writeFileSync(&#39;blog/manifest.json&#39;, JSON.stringify(posts))\n</code></pre><p>And, tada! Simple, fast, blog-aware-ish, vue-based site that lives on GitHub Pages.</p>\n<p>Next up, I’d like to add a blog-aware URL structure for Vue Router, so each post and work item can have it’s own permalink.</p>\n";
 
 /***/ }),
 /* 160 */
@@ -32311,6 +32319,79 @@ if (false) {
 /***/ (function(module, exports) {
 
 module.exports = "/images/14316417206_4cc28f91a0_b.jpg?3d15dfc8e7c77885d29f50a4df9e2347";
+
+/***/ }),
+/* 169 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 id=\"should-designers-learn-to-code-\">Should designers learn to code?</h1>\n<p>Yep. Yup. Yes. The answer is 100% yes. Yes, fuck yes, definitely yes, unquestionably yes.</p>\n<p>In case you’re not convinced yet, here’s a few reasons why:</p>\n<h3 id=\"1-prototyping-in-html-js-and-css-is-honestly-sometimes-faster-\">1. Prototyping in HTML, JS and CSS is honestly sometimes faster.</h3>\n<h3 id=\"2-you-will-communicate-better-with-developers-and-you-will-make-their-lives-easier-and-people-like-it-when-you-make-their-lives-easier-\">2. You will communicate better with developers, and you will make their lives easier. And people like it when you make their lives easier.</h3>\n<h3 id=\"3-understanding-how-basic-programming-principles-work-is-the-difference-between-making-great-designs-and-making-completely-impossible-designs-\">3. Understanding how basic programming principles work is the difference between making great designs and making completely impossible designs.</h3>\n<p>Like a lot of front-end web developers, in the beginning, I struggled with the perennial question, “But which language should I learn?!” There are honestly so many things to learn, and so many new frameworks coming on the scene, that it gets complicated and overwhelming — fast.</p>\n<p>The good news is that as a designer, learning a little bit of whatever is interesting to you will be hugely beneficial. Ruby, PHP, Javascript, Go, Java — whatever. But taking the time to understand how computers “think” has been the difference between some of my best designs and some of my “Okay, well, that was an interesting idea, but it’s also completely insane.”</p>\n<p>Learning CSS, </p>\n<h3 id=\"4-when-you-have-free-time-you-can-make-your-own-stuff-\">4. When you have free time, you can make your own stuff.</h3>\n";
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = "<h1 id=\"pacific-legal-foundation\">Pacific Legal Foundation</h1>\n<p><strong>Work In Progress</strong></p>\n<ul>\n<li>Art Direction</li>\n<li>User Experience Design</li>\n<li>Visual Design</li>\n<li>Project Management</li>\n</ul>\n<h3 id=\"research\">Research</h3>\n<p><img src=\"" + __webpack_require__(171) + "\" alt=\"\">\n<img src=\"" + __webpack_require__(172) + "\" alt=\"\"></p>\n<h3 id=\"sketching\">Sketching</h3>\n<p><img src=\"" + __webpack_require__(173) + "\" alt=\"\">\n<img src=\"" + __webpack_require__(174) + "\" alt=\"\">\n<img src=\"" + __webpack_require__(175) + "\" alt=\"\"></p>\n<h3 id=\"moodboards\">Moodboards</h3>\n<p><img src=\"" + __webpack_require__(177) + "\" alt=\"\">\n<img src=\"" + __webpack_require__(178) + "\" alt=\"\"></p>\n<p><img src=\"" + __webpack_require__(179) + "\" alt=\"\"></p>\n<h3 id=\"ux-design-testing\">UX Design + Testing</h3>\n<p><img src=\"" + __webpack_require__(180) + "\" alt=\"\"></p>\n<p><img src=\"" + __webpack_require__(181) + "\" alt=\"\"></p>\n";
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/analytics-4.png?5ca04fbf2f7bf639eae4c3f1176f8678";
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/analytics-1.png?3128c1f1a819ba20d097c711bf59074c";
+
+/***/ }),
+/* 173 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/ink-image-2.png?ce28061dd62de8ba285e7a10e9bf8b5f";
+
+/***/ }),
+/* 174 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/ink-image.png?12a99aaca9eb82155e25b37c174860f5";
+
+/***/ }),
+/* 175 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/press-page-flow.jpg?db69d63d897cf8512317b0b91218d0aa";
+
+/***/ }),
+/* 176 */,
+/* 177 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/1.jpg?c472bedb216e5f1e73343570c9df824d";
+
+/***/ }),
+/* 178 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/6.png?5562d6ce242cb566930114795e376d31";
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/screen-4.png?7d3c0c79c99fb39fd26abf5d4c2e438d";
+
+/***/ }),
+/* 180 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/E5DC243B-194D-4FE3-8A68-D70613BADDB7.png?7aaa30530be7ed18b8ed3acb36cc8484";
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/40CC857C-43F7-40C2-93BC-1FC5D03AF231.png?64bce5d70debc5c22075a75ef6fc701b";
 
 /***/ })
 /******/ ]);

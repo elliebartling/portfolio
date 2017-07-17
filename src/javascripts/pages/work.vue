@@ -24,6 +24,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       index: [
+        // 'pacific-legal-foundation',
         'cat-merrick-studios',
         'texas-millennial-institute',
         // 'my-magic-mud',
