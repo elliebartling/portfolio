@@ -1,4 +1,4 @@
-# CMS-less, and it feels great.
+# A Blog-Aware-ish Single Page App with Vue.js and Bear App
 * front-end dev
 * productivity
 
