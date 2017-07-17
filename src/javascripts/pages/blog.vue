@@ -23,6 +23,7 @@
 
 <script>
 var S = require('string')
+var moment = require('moment')
 
 export default {
   name: 'hi',
@@ -55,7 +56,10 @@ export default {
         posts[p].body = w
       }
 
-      return posts
+      return posts.sort((a, b) => {
+        // Sort the posts most to least recent
+        return -(moment(a.date).diff(moment(b.date)))
+      })
     }
   },
   methods: {

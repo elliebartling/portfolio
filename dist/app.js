@@ -32126,6 +32126,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 var S = __webpack_require__(127);
+var moment = __webpack_require__(0);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hi',
@@ -32159,7 +32160,10 @@ var S = __webpack_require__(127);
         posts[p].body = w;
       }
 
-      return posts;
+      return posts.sort(function (a, b) {
+        // Sort the posts most to least recent
+        return -moment(a.date).diff(moment(b.date));
+      });
     }
   },
   methods: {
