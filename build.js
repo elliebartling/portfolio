@@ -1,18 +1,21 @@
 var fs = require('graceful-fs')
-var posts = {}
+var path = require('path')
+var posts = []
 
-var p = fs.readdirSync('./blog')
-console.log(p)
+var list = fs.readdirSync('./blog')
 
-for (post in p) {
-  var filename = p[post]
-  var stats = fs.statSync('./blog/' + filename)
-  var date = stats.mtime
+for (p in list) {
+  var filename = list[p]
 
-  posts[filename] = {}
-  posts[filename].date = date
-  posts[filename].path = 'blog/' + filename
-  console.log(posts[filename])
+  // Only get markdown files, not folders
+  if (path.extname(filename) == '.md') {
+    var stats = fs.statSync('./blog/' + filename)
+    var date = stats.mtime
+
+    posts[p] = {}
+    posts[p].date = date
+    posts[p].path = filename
+  }
 }
 
-fs.writeFileSync('blog-manifest.json', JSON.stringify(posts))
+fs.writeFileSync('blog/manifest.json', JSON.stringify(posts))

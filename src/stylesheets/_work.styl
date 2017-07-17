@@ -49,15 +49,19 @@
 
 
 .work-item
-  width 70%
+  width 100%
+  +above('l')
+    width 70%
   max-width 800px
   // margin auto
   img
-    width calc(100% + 80px)
-    margin-left -40px
-    margin-right -40px
-    margin-top 30px
-    margin-bottom 30px
+    width 100%
+    +above('s')
+      width calc(100% + 80px)
+      margin-left -40px
+      margin-right -40px
+      margin-top 30px
+      margin-bottom 30px
 
 #work
   display flex
@@ -69,7 +73,9 @@
 
 #work .work-item
   background white
-  padding 40px
+  padding 20px
+  +above('s')
+    padding 40px
   margin-bottom 40px
   h1
     @extend .title
@@ -90,17 +96,28 @@
       text-transform uppercase
       font-weight bold
       letter-spacing 1px
+      margin-bottom 10px
   ul, ol
     width 90%
+
 #work .sidebar
+  display none
+  +above('l')
+    display block
   position fixed
   top 120px
   right 0px
   padding 20px
+  padding-left 30px
+  padding-right 30px
   background white
-  display block
   margin-right 40px
-  width 300px
+  h5
+    text-transform uppercase
+    color black
+    font-weight bold
+    letter-spacing 1px
+    font-size 14px
   a
     color rgba(black, .5)
     margin-bottom 5px
@@ -110,7 +127,7 @@
     &:after
       height 100%
       width 4px
-      left -20px
+      left -30px
       bottom 0
 
 

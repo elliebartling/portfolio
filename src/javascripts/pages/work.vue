@@ -4,6 +4,9 @@
       <div class="work-item" v-for="w in work" v-html="w.body" :id="w.slug"></div>
     </div>
     <div class="sidebar">
+      <div class="sidebar-item">
+        <h5>Jump To</h5>
+      </div>
       <div v-for="w in work" :id="w.slug" class="sidebar-item" >
         <a href="#" v-scroll-to="{ el: '#' + w.slug, offset: -20, onDone: onScrollDone() }">{{ w.slug | humanize }}</a>
       </div>

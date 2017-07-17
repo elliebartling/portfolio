@@ -6,14 +6,6 @@
         <div class="blog-body" v-html="p.body"></div>
       </div>
     </div>
-    <!-- <div class="sidebar">
-      <div v-for="w in work" :id="w.slug" class="sidebar-item" >
-        <a href="#" v-scroll-to="{ el: '#' + w.slug, offset: -20, onDone: onScrollDone() }">{{ w.slug | humanize }}</a>
-      </div>
-      <div class="sidebar-item">
-        <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
-      </div>
-    </div> -->
   </section>
 </template>
 
@@ -28,7 +20,7 @@ export default {
   computed: {
     posts: function() {
       var app = this
-      var list = require(`../../../blog/blog-manifest.json`)
+      var list = require('../../../blog/manifest.json')
       var posts = []
 
       console.log(list)
@@ -37,7 +29,13 @@ export default {
         posts[p] = []
         posts[p].date = list[p].date
         console.log(list[p].path)
-        posts[p].body = require('../../../blog/' + list[p].path)
+
+        var s = require(`../../../blog/${list[p].path}`)
+
+        // Fix relative path issues with Marked's image import
+        var w = s.replace(new RegExp('\/images', 'g'), 'images')
+
+        posts[p].body = w
       }
 
       return posts
