@@ -55,6 +55,16 @@ export default {
     onScrollDone: function () {
 
     }
+  },
+  mounted: function () {
+    console.log("Highlight things on work")
+    // hljs.initHighlightingOnLoad();
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        console.log("Highlighting " + block)
+        hljs.highlightBlock(block);
+      });
+    });
   }
 }
 </script>

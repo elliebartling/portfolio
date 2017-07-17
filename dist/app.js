@@ -31853,6 +31853,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   methods: {
     onScrollDone: function onScrollDone() {}
+  },
+  mounted: function mounted() {
+    console.log("Highlight things on work");
+    // hljs.initHighlightingOnLoad();
+    $(document).ready(function () {
+      $('pre code').each(function (i, block) {
+        console.log("Highlighting " + block);
+        hljs.highlightBlock(block);
+      });
+    });
   }
 });
 
@@ -32168,6 +32178,16 @@ var moment = __webpack_require__(0);
   },
   methods: {
     onScrollDone: function onScrollDone() {}
+  },
+  mounted: function mounted() {
+    console.log("Highlight things on the blog");
+    // hljs.initHighlightingOnLoad();
+    $(document).ready(function () {
+      $('pre code').each(function (i, block) {
+        console.log("Highlighting " + block);
+        hljs.highlightBlock(block);
+      });
+    });
   }
 });
 

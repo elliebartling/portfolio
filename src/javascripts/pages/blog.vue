@@ -64,8 +64,17 @@ export default {
   },
   methods: {
     onScrollDone: function () {
-
     }
+  },
+  mounted: function () {
+    console.log("Highlight things on the blog")
+    // hljs.initHighlightingOnLoad();
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        console.log("Highlighting " + block)
+        hljs.highlightBlock(block);
+      });
+    });
   }
 }
 </script>
