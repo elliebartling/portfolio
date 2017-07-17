@@ -36,7 +36,11 @@ export default {
       var work = []
 
       for (var i in app.index) {
-        var w = require(`../../../work/${app.index[i]}.md`)
+        var s = require(`../../../work/${app.index[i]}.md`)
+
+        // Fix relative path issues with Marked's image import
+        var w = s.replace('\/images', 'images')
+
         work[i] = { index: i, slug: app.index[i], body: w }
       }
       console.log(work)
