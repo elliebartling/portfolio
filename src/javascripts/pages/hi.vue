@@ -2,7 +2,7 @@
   <section id="hi-im-ellen" class="">
     <div class="body">
       <div class="personal-image">
-        <img src="../../images/me_and_gunner.png" />
+        <img src="dist/images/me_and_gunner.png" />
       </div>
       <div class="text">
         <h2 class="title">Hi, I’m Ellen</h2>
