@@ -1,0 +1,53 @@
+
+html
+  font-family 'Roboto'
+  color lighten(black, 30)
+
+h1, h2, h3, h4
+  // font-family 'Noto Serif'
+  font-weight 400
+  color black
+  line-height 1.2
+  margin-bottom 1.3rem
+
+.fancy
+  font-family 'Bitter'
+
+body
+  padding-top 40px
+  color lighten(black, 40)
+  line-height 1.6
+  font-weight 400
+
+strong
+  color black
+  font-weight 600
+
+a
+  color black
+  font-weight 600
+  display inline-block
+  position relative
+  &:after
+    display block
+    content ""
+    height 2px
+    width 0%
+    position absolute
+    left 0
+    bottom -3px
+    background black
+    // background-image linear-gradient(-135deg, #1916BD 0%, #CE88EC 100%)
+    cursor pointer
+
+a:hover, a:focus
+  text-decoration none
+  color black
+  &:after
+    width 100%
+    transition width 0.25s ease
+
+a.active, a.router-link-active
+  &:after
+    width 100%
+    transition width 0.25s ease

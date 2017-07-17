@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>"Ellen Bartling</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/app.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <div class="left">
+          <router-link to="/hello" class="skill-link" href="">hello</router-link>
+          <router-link to="/work" class="skill-link" href="">work</router-link>
+          <router-link to="/blog" class="skill-link" href="">blog</router-link>
+        </div>
+        <div class="right">
+          <a href="https://www.instagram.com/elliembartling" target="_blank">instagram</a>
+          <a href="https://www.github.com/ellenbartling" target="_blank">github</a>
+        </div>
+      </div>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
+
+    <footer class="navbar">
+      <div class="left">
+        <p>Got an idea for a project? <a href="mailto:ellenbartling@gmail.com">Say hi.</a>
+      </div>
+      <div class="right">
+        built with ❤️ using: <a href="">Vue.js</a><a href="">Stylus</a>
+      </div>
+    </footer>
+
+    <script src="dist/app.js"></script>
+    <script src="https://use.fontawesome.com/202100969d.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
+</html>

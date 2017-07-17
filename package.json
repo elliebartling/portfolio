@@ -1,0 +1,31 @@
+{
+  "name": "portfolio.vue",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "Ellen Bartling <ellenbartling@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "markdown-loader": "^2.0.1",
+    "marked": "^0.3.6",
+    "moment": "^2.18.1",
+    "rupture": "^0.6.2",
+    "string": "^3.3.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue": "^2.4.1",
+    "vue-router": "^2.7.0",
+    "vue-scrollto": "^2.7.2"
+  },
+  "devDependencies": {
+    "cross-env": "^3.0.0",
+    "laravel-mix": "^1.2.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
+  }
+}

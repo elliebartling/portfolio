@@ -1,0 +1,94 @@
+app-width = 970px
+
+body
+  padding-top 0px
+
+#main
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  justify-content center
+  align-items flex-start
+  max-width 100%
+  width 100%
+  section
+    width 100%
+
+.navbar
+  margin auto
+  height 40px
+  margin 10px
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  justify-content space-between
+  align-items center
+  // margin-bottom 3rem
+  a
+    margin-right 15px
+    text-transform lowercase
+
+footer.navbar
+  padding 15px
+  margin-bottom 10px
+  p
+    margin-bottom 0px
+
+.section
+  // margin-bottom 4rem
+  padding-top 40px
+  padding-bottom 10px
+  .container
+    display flex
+    flex-wrap nowrap
+    flex-direction row
+
+.section:first-of-type
+  padding-top 10px
+.section-gray
+  background lighten(black, 95)
+
+.fade-enter-active, .fade-leave-active 
+  transition-property: opacity
+  transition-duration: .25s
+
+
+.fade-enter-active 
+  transition-delay: .25s
+
+
+.fade-enter, .fade-leave-active 
+  opacity: 0
+
+
+
+
+
+#work-ive-done .section--body
+  width: 100%
+
+#skills
+  margin 0px
+  padding 0px
+#skills .section--body
+  width 100%
+#skills .skills-container
+  display flex
+  flex-wrap nowrap
+  flex-direction row
+  width 100%
+
+#skills .skill
+  padding 10px
+  padding-bottom 3px
+  // margin-right 20px
+  text-align left
+  display flex
+  justify-content flex-start
+  align-items center
+  flex-direction column
+
+#skills .skill > .skill-link
+  color rgba(black, .5)
+#skills .skill > .skill-link.active, #skills .skill > .skill-link:hover
+  color black
