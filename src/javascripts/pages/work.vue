@@ -39,7 +39,7 @@ export default {
         var s = require(`../../../work/${app.index[i]}.md`)
 
         // Fix relative path issues with Marked's image import
-        var w = s.replace('\/images', 'images')
+        var w = s.replace(new RegExp('\/images', 'g'), 'images')
 
         work[i] = { index: i, slug: app.index[i], body: w }
       }
