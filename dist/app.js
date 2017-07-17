@@ -32105,6 +32105,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var S = __webpack_require__(127);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hi',
@@ -32131,7 +32145,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         // Fix relative path issues with Marked's image import
         var w = s.replace(new RegExp('\/images', 'g'), 'images');
+        var title = s.substring(s.indexOf('>') + 1, s.indexOf('</h1>'));
 
+        posts[p].title = title;
+        posts[p].slug = S(title).slugify();
         posts[p].body = w;
       }
 
@@ -32152,6 +32169,7 @@ var map = {
 	"./07-16-cms-less-and-it-feels-so-right/screen-1.png": 120,
 	"./07-16-cms-less-and-it-feels-so-right/screen-2.png": 119,
 	"./07-16-currently-reading-the-blank-slate.md": 160,
+	"./07-16-currently-reading-the-blank-slate/14316417206_4cc28f91a0_b.jpg": 168,
 	"./manifest.json": 118
 };
 function webpackContext(req) {
@@ -32174,13 +32192,13 @@ webpackContext.id = 158;
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<h1 id=\"i-m-cms-less-and-it-feels-so-right-\">I’m CMS-less and it feels so right.</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I’m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem 😍, but honestly, I also love learning new things, and I’m always going to consider whatever’s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn’t love free hosting, right?), but that… was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for “Wordpress-light”, but it requires PHP (not available via GitHub Pages), and I’d just as soon write in my own favorite markdown editor.</p>\n<p><img src=\"" + __webpack_require__(120) + "\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren’t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you’re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn’t jazzed about the number of plugins I needed in order to have multiple different kinds of “posts,” and ultimately, I found myself missing my webpack based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"" + __webpack_require__(119) + "\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> 😬</p>\n<p>Middleman was by far my favorite of the static-site generators — ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to yearn for Vue’s transitions, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n";
+module.exports = "<h1 id=\"i-m-cms-less-and-it-feels-great-\">I’m CMS-less and it feels great.</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I’m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem 😍, but honestly, I also love learning new things, and I’m always going to consider whatever’s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn’t love free hosting, right?), but that… was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for “Wordpress-light”, but it requires PHP, and I’d honestly rather write in my own favorite markdown editor than in a browser.</p>\n<p><img src=\"" + __webpack_require__(120) + "\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren’t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you’re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn’t jazzed about the number of plugins I needed in order to have multiple different kinds of “posts,” and ultimately, I found myself missing my webpack-based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"" + __webpack_require__(119) + "\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> 😬</p>\n<p>Middleman was by far my favorite of the static-site generators — ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to include Vue elements, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n<p>So, with the help of <a href=\"https://www.npmjs.com/package/markdown-loader\">markdown-loader</a> that’s what I ended up doing.</p>\n<p>Since I try to keep my “Work” page pretty curated, there’s not much to track there. It’s not hard to simply update the Vue component to grab another markdown file when I decide to add another one. That file looks like this:</p>\n<pre><code>&lt;script&gt;\nexport default {\n  name: &#39;hi&#39;,\n  data () {\n    return {\n      index: [\n        &#39;cat-merrick-studios&#39;,\n        &#39;texas-millennial-institute&#39;,\n        // &#39;my-magic-mud&#39;, // &lt;-- coming soon!\n        &#39;social-evolution&#39;,\n        &#39;at-the-fork-virtual-reality&#39;,\n        // &#39;free-together&#39;\n      ]\n    }\n  },\n  computed: {\n    work: function() {\n      var app = this\n      var work = []\n\n      for (var i in app.index) {\n        var s = require(`../../../work/${app.index[i]}.md`)\n\n        // Fix relative path issues with Marked&#39;s image import\n        var w = s.replace(new RegExp(&#39;\\/images&#39;, &#39;g&#39;), &#39;images&#39;)\n\n        work[i] = { index: i, slug: app.index[i], body: w }\n      }\n      console.log(work)\n      return work\n    }\n  },\n  methods: {}\n}\n&lt;/script&gt;\n</code></pre><p>The blog is a little trickier: you don’t want your client-side javascript to be able to traverse a directory (for obvious security reasons), but there’s going to be enough content there that it’s going to get annoying to track individually.</p>\n<p>Since you <em>can</em> ask Webpack to do a little file-requiring during the build, as long as you explicitly tell it which files to grab, I wrote a simple node script that compiles a JSON directory of the blog posts and iterate through that during build:</p>\n<pre><code>var fs = require(&#39;graceful-fs&#39;)\nvar path = require(&#39;path&#39;)\nvar posts = []\n\nvar list = fs.readdirSync(&#39;./blog&#39;)\n\nfor (p in list) {\n  var filename = list[p]\n\n  // Only get markdown files, not folders\n  if (path.extname(filename) == &#39;.md&#39;) {\n    var stats = fs.statSync(&#39;./blog/&#39; + filename)\n    var date = stats.mtime\n\n    posts[p] = {}\n    posts[p].date = date\n    posts[p].path = filename\n  }\n}\n\nfs.writeFileSync(&#39;blog/manifest.json&#39;, JSON.stringify(posts))\n</code></pre><p>And, tada! Simple, fast, blog-aware-ish, vue-based site that lives on GitHub Pages.</p>\n<p>Next up, I’d like to add a blog-aware URL structure for Vue Router, so each post and work item can have it’s own permalink.</p>\n";
 
 /***/ }),
 /* 160 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<h1 id=\"currently-reading-the-blank-slate-\">Currently Reading: <em>The Blank Slate</em></h1>\n<ul>\n<li>cognitive science</li>\n<li>user experience design</li>\n</ul>\n<p><em>Link:</em> <a href=\"https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&amp;qid=1500250928&amp;sr=8-1&amp;keywords=the+blank+slate\">The Blank Slate: The Modern Denial of Human Nature</a></p>\n";
+module.exports = "<h1 id=\"currently-reading-the-blank-slate-\">Currently Reading: <em>The Blank Slate</em></h1>\n<ul>\n<li>cognitive science</li>\n<li>user experience design</li>\n</ul>\n<p><em>Link:</em> <a href=\"https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&amp;qid=1500250928&amp;sr=8-1&amp;keywords=the+blank+slate\">The Blank Slate: The Modern Denial of Human Nature</a></p>\n<p><img src=\"" + __webpack_require__(168) + "\" alt=\"\">\n<em>My man Pinker and his crazy, amazing hair. Source: <a href=\"https://c1.staticflickr.com/3/2918/14316417206_4cc28f91a0_b.jpg\">Flickr</a></em></p>\n";
 
 /***/ }),
 /* 161 */
@@ -32193,11 +32211,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "body"
-  }, _vm._l((_vm.posts), function(p) {
+  }, [_vm._l((_vm.posts), function(p) {
     return _c('div', {
       staticClass: "work-item",
       attrs: {
-        "id": p
+        "id": p.slug
       }
     }, [_c('div', {
       staticClass: "blog-date"
@@ -32207,8 +32225,68 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "innerHTML": _vm._s(p.body)
       }
     })])
-  }))])
-},staticRenderFns: []}
+  }), _vm._v(" "), _c('div', {
+    staticClass: "sidebar"
+  }, [_vm._m(0), _vm._v(" "), _vm._l((_vm.posts), function(p) {
+    return _c('div', {
+      staticClass: "sidebar-item",
+      attrs: {
+        "id": p.slug
+      }
+    }, [_c('a', {
+      directives: [{
+        name: "scroll-to",
+        rawName: "v-scroll-to",
+        value: ({
+          el: '#' + p.slug,
+          offset: -20,
+          onDone: _vm.onScrollDone()
+        }),
+        expression: "{ el: '#' + p.slug, offset: -20, onDone: onScrollDone() }"
+      }],
+      attrs: {
+        "href": "#"
+      },
+      domProps: {
+        "innerHTML": _vm._s(p.title)
+      }
+    })])
+  }), _vm._v(" "), _c('div', {
+    staticClass: "sidebar-item"
+  }, [_c('a', {
+    directives: [{
+      name: "scroll-to",
+      rawName: "v-scroll-to",
+      value: ({
+        el: '#work',
+        offset: -80,
+        onDone: _vm.onScrollDone()
+      }),
+      expression: "{ el: '#work', offset: -80, onDone: onScrollDone() }"
+    }],
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Back to Top")])])], 2), _vm._v(" "), _c('a', {
+    directives: [{
+      name: "scroll-to",
+      rawName: "v-scroll-to",
+      value: ({
+        el: '#work',
+        offset: -80,
+        onDone: _vm.onScrollDone()
+      }),
+      expression: "{ el: '#work', offset: -80, onDone: onScrollDone() }"
+    }],
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Back to Top")])], 2)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "sidebar-item"
+  }, [_c('h5', [_vm._v("Jump To")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -32222,6 +32300,17 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/14316417206_4cc28f91a0_b.jpg?3d15dfc8e7c77885d29f50a4df9e2347";
 
 /***/ })
 /******/ ]);

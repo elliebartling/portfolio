@@ -1,15 +1,29 @@
 <template>
   <section id="work" class="">
     <div class="body">
-      <div class="work-item" v-for="p in posts" :id="p">
+      <div class="work-item" v-for="p in posts" :id="p.slug">
         <div class="blog-date">{{ p.date | date }}</div>
         <div class="blog-body" v-html="p.body"></div>
       </div>
+      <div class="sidebar">
+        <div class="sidebar-item">
+          <h5>Jump To</h5>
+        </div>
+        <div v-for="p in posts" :id="p.slug" class="sidebar-item" >
+          <a href="#" v-scroll-to="{ el: '#' + p.slug, offset: -20, onDone: onScrollDone() }" v-html="p.title"></a>
+        </div>
+        <div class="sidebar-item">
+          <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
+        </div>
+      </div>
+      <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
     </div>
   </section>
 </template>
 
 <script>
+var S = require('string')
+
 export default {
   name: 'hi',
   data () {
@@ -34,7 +48,10 @@ export default {
 
         // Fix relative path issues with Marked's image import
         var w = s.replace(new RegExp('\/images', 'g'), 'images')
+        var title = s.substring(s.indexOf('>') + 1, s.indexOf('</h1>'))
 
+        posts[p].title = title
+        posts[p].slug = S(title).slugify()
         posts[p].body = w
       }
 

@@ -58,6 +58,12 @@ a.router-link-active:after {
   -webkit-transition: width 0.25s ease;
   transition: width 0.25s ease;
 }
+pre code.hljs {
+  padding: 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  border-color: transparent;
+}
 body {
   padding-top: 0px;
 }
