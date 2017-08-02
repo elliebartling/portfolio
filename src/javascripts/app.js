@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import App from './App.vue'
+
+/*
+  * Add filters for Vue
+ */
 
 var marked = require('marked')
 Vue.filter('marked', marked)
 
-var VueScrollTo = require('vue-scrollto')
-Vue.use(VueScrollTo)
 
 /*
   * To Title Case 2.1 – http://individed.com/code/to-title-case/
@@ -50,13 +51,31 @@ Vue.filter('date', function (value) {
   return pretty
 })
 
+
+
+/*
+  * Add plugins
+ */
+
+
+var VueScrollTo = require('vue-scrollto')
+Vue.use(VueScrollTo)
+
+var ScrollActive = require('vue-scrollactive')
+Vue.use(ScrollActive)
+
 Vue.use(VueRouter)
 
 // 1. Define route components.
 // These can be imported from other files
 const Hi = require('./pages/hi.vue')
 const Work = require('./pages/work.vue')
+const WorkSingle = require('./pages/work-single.vue')
 const Blog = require('./pages/blog.vue')
+
+
+const WorkSidebar = require('./pages/work-sidebar.vue')
+Vue.component('work-sidebar', WorkSidebar)
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -67,6 +86,7 @@ const routes = [
   { path: '/', component: Hi },
   { path: '/hello', component: Hi },
   { path: '/work', component: Work },
+  { path: '/work/:project', component: WorkSingle },
   { path: '/blog', component: Blog }
 ]
 

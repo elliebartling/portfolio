@@ -1,53 +1,43 @@
 <template>
   <section id="work" class="">
     <div class="body">
-      <div class="work-item" v-for="w in work" v-html="w.body" :id="w.slug"></div>
+      <div class="work-item" v-for="w in work" v-html="w.content" :id="w.slug"></div>
     </div>
     <div class="sidebar">
       <div class="sidebar-item">
         <h5>Jump To</h5>
       </div>
-      <div v-for="w in work" :id="w.slug" class="sidebar-item" >
-        <a href="#" v-scroll-to="{ el: '#' + w.slug, offset: -20, onDone: onScrollDone() }">{{ w.slug | humanize }}</a>
-      </div>
+
+      <!-- <scroll-active ref="scrollactive" class="my-nav"> -->
+        <ul class="sidebar-item">
+          <li v-for="w in work">
+            <router-link :to="'/work/' + w.slug" class="skill-link">{{ w.slug | humanize }}</router-link>
+          </li>
+        </ul>
+      <!-- </scroll-active> -->
+
       <div class="sidebar-item">
-        <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
+        <a class="scroll" href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+// import ScrollActive from 'vue-scrollactive'
+const data = require('../work-manifest.json')
+
 export default {
   name: 'hi',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      index: [
-        // 'pacific-legal-foundation',
-        'cat-merrick-studios',
-        'texas-millennial-institute',
-        // 'my-magic-mud',
-        'social-evolution',
-        'at-the-fork-virtual-reality',
-        // 'free-together'
-      ]
+      // msg: 'Welcome to Your Vue.js App'
     }
   },
+  // components: {'scrollactive' : ScrollActive},
   computed: {
     work: function() {
-      var app = this
-      var work = []
-
-      for (var i in app.index) {
-        var s = require(`../../../work/${app.index[i]}.md`)
-
-        // Fix relative path issues with Marked's image import
-        var w = s.replace(new RegExp('\/images', 'g'), 'images')
-
-        work[i] = { index: i, slug: app.index[i], body: w }
-      }
-      console.log(work)
+      var work = require('../work-manifest.json')
       return work
     }
   },
@@ -57,14 +47,22 @@ export default {
     }
   },
   mounted: function () {
+    var app = this
+
+
     console.log("Highlight things on work")
-    // hljs.initHighlightingOnLoad();
     $(document).ready(function() {
       $('pre code').each(function(i, block) {
         console.log("Highlighting " + block)
         hljs.highlightBlock(block);
       });
     });
+
+
+    if (app.$route.params.project) {
+      console.log(app.$route.params.project)
+      app.$scrollTo('#' + app.$route.params.project)
+    }
   }
 }
 </script>
