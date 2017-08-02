@@ -5,18 +5,40 @@ html
 
 h1, h2, h3, h4
   // font-family 'Noto Serif'
-  font-weight 400
+  font-weight 700
   color black
   line-height 1.4
-  margin-bottom 1.3rem
+  margin-bottom 1rem
 
 .fancy
   font-family 'Bitter'
 
+.title
+  font-size 36px
+  font-weight 700
+  margin-bottom 10px
+  letter-spacing -1px
+  position relative
+  &:before
+    content: ""
+    width line-width
+    height 100%
+    position absolute
+    left -20px
+    +above('s')
+      left -40px
+    background black
+
+.subtitle
+  text-transform uppercase
+  letter-spacing 1.5px
+  color lighten(black, 70)
+  font-size 1rem
+
 body
   padding-top 40px
-  color lighten(black, 40)
-  line-height 1.6
+  color lighten(black, 20)
+  line-height 1.7
   font-weight 400
 
 strong
@@ -32,11 +54,11 @@ a
     display block
     content ""
     height 2px
-    width 0%
+    width 100%
     position absolute
     left 0
-    bottom -3px
-    background black
+    bottom -1px
+    background lighten(black, 85)
     // background-image linear-gradient(-135deg, #1916BD 0%, #CE88EC 100%)
     cursor pointer
 
@@ -45,12 +67,16 @@ a:hover, a:focus
   color black
   &:after
     width 100%
-    transition width 0.25s ease
+    background black
+    transition all 0.25s ease
 
 a.active, a.router-link-active
   &:after
     width 100%
+    background black
     transition width 0.25s ease
+
+
 
 pre code.hljs
   padding 20px

@@ -10,7 +10,7 @@
           <h5>Jump To</h5>
         </div>
         <div v-for="p in posts" :id="p.slug" class="sidebar-item" >
-          <a href="#" v-scroll-to="{ el: '#' + p.slug, offset: -20, onDone: onScrollDone() }" v-html="p.title"></a>
+          <a href="#" v-scroll-to="{ el: '#' + p.slug, offset: -80, onDone: onScrollDone() }" v-html="p.title"></a>
         </div>
         <div class="sidebar-item">
           <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>

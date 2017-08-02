@@ -2,12 +2,13 @@
   background #DEDEDE
   position relative
   padding-top 0px
+  padding-bottom 60px
 
 #hi-im-ellen .featured-image img
   width 50%
   display none
 
-.body
+.hero
   width 100%
   margin auto
   padding 10px
@@ -15,18 +16,52 @@
     padding 60px
   position relative
 
-#hi-im-ellen .text
+.body, .why-both, .cool-thing-1
+  width 100%
+  margin auto
+  padding 10px
+  +above('s')
+    padding 60px
+  position relative
+
+.text
   background white
   padding 20px
   +above('s')
     padding 40px
   +above('xl')
     right 60px
-    z-index 4
+
+#hi-im-ellen .hero .text
+  z-index 3
+  position relative
+  // top 50%
+  // transform translateY(-50%)
+  width 100%
+  padding-bottom 60px
+  +above('xl')
+    width 33%
     position absolute
     top 50%
     transform translateY(-50%)
-    width 33%
+
+.currently-nerding
+  position absolute
+  bottom -60px
+  right 0px
+  // background rgba(#000000, .05)
+  // color white
+  padding 15px
+  padding-left 30px
+  // padding-right 30px
+  display flex
+  flex-direction row
+  justify-content flex-start
+  align-items center
+  margin-bottom 0px
+  img
+    width 30px
+    margin-right 5px
 
 #hi-im-ellen .personal-image
   max-width 100%
@@ -35,18 +70,64 @@
   img
     width 100%
 
-.title
-  font-size 36px
-  font-weight 700
-  margin-bottom 10px
-  letter-spacing -1px
+#hi-im-ellen .why-both
   position relative
-  &:before
-    content: ""
-    width 4px
-    height 100%
-    position absolute
-    left -20px
-    +above('s')
-      left -40px
-    background black
+  display flex
+  justify-content flex-start
+  align-items flex-start
+  flex-direction row
+  flex-wrap wrap
+  // +above('l')
+  //   flex-direction row
+
+#hi-im-ellen .why-both .text
+  max-width 100%
+  +above('l')
+    margin-right 60px
+    max-width (5 / 12 * 100%)
+
+#hi-im-ellen .why-both .stack
+  max-width (6/12 * 100%)
+  margin-right 0px
+  +above('l')
+    max-width (3/12 * 100%)
+  padding 30px
+  padding-left 0px
+  padding-right 0px
+  text-align left
+  width 100%
+  margin-right 0px
+  .stack-list
+    width 100%
+    list-style-type none
+    padding-left 0px
+
+#hi-im-ellen .why-both .stack:last-of-type
+  +above('l')
+    max-width (3/12 * 100%)
+
+#hi-im-ellen .why-both .image
+  background white
+  width 100%
+  +above('l')
+    width 40%
+  +above('xl')
+    width auto
+  img
+    margin-bottom 10px
+    width 100%
+  p
+    margin-left 20px
+
+
+#hi-im-ellen .why-both .bg-image
+  position absolute
+  right 20px
+  width 200px
+
+.image-with-caption
+  background white
+  img
+    max-width 100%
+  p
+    padding 10px 20px
