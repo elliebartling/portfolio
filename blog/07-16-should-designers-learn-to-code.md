@@ -1,5 +1,5 @@
 # Should designers learn to code? 
-Yep. Yup. Yes. The answer is 100% yes. Yes, definitely yes, unquestionably yes. But in case you’re not convinced yet, here’s a few ways learning to code has made me a much better designer:
+Yep. Yup. Yes. Definitely yes, absolutely yes, unquestionably yes. But in case you’re not convinced yet, here’s a few ways learning to code has made me a much better designer:
 
 ### 1. Prototyping in HTML, JS and CSS is honestly sometimes faster.
 Prototyping tools have gotten pretty drag and drop lately, and importing Sketch files into Invision, Marvel and Framer has become dreamily easy. 
