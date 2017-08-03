@@ -38,6 +38,7 @@ mix.js('src/javascripts/app.js', 'dist/')
        'dist/app.js'
      ]
    })
+  //  .version()
 
 // Full API
 // mix.js(src, output);

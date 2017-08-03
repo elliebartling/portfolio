@@ -7,7 +7,7 @@
       <router-link :to="'/work/' + w.slug" class="skill-link">{{ w.slug | humanize }}</router-link>
     </div>
     <div class="sidebar-item">
-      <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }">Back to Top</a>
+      <a href="#" v-scroll-to="{ el: '#work', offset: -80, onDone: onScrollDone() }"><i class="fa fa-angle-double-up"></i>&nbsp;Back to Top</a>
     </div>
   </div>
 </template>

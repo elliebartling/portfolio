@@ -33367,6 +33367,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hi',
@@ -33428,7 +33432,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "text"
   }, [_c('h2', {
     staticClass: "title"
-  }, [_vm._v("Why design "), _c('i', [_vm._v("and")]), _vm._v(" develop?")]), _vm._v(" "), _c('p', [_vm._v("Well, most importantly, getting to grapple with every part of the process, from market research to CSS transitions, is incredibly rewarding, and, personally, I think it's crucial to designing and developing truly awesome experiences. My favorite roles on projects are when I can be the “glue” between teams, and hop into whatever part of the process needs my help, or lend perspective to another team member’s work.")]), _vm._v(" "), _c('p', [_vm._v("I'm a huge advocate for being a great generalist: I've found that diving into the deep end of front end web development makes me a better designer, communicator, and advocate for the user. Understanding how routes work makes me a better information architect; understanding how hierarchy and whitespace affect information recall makes me a better developer.")]), _vm._v(" "), _c('p', [_vm._v("And after four years in the industry, I've learned that being able to \"speak\" designer and developer is a magical secret sauce that makes projects more fun, more profitable, and less stressful.")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("I'm a Designer + a Developer")]), _vm._v(" "), _c('p', [_vm._v("Why design & develop? First: grappling with every part of the process, from market research to CSS transitions, is incredibly rewarding. I love getting to indulge my right-brain and left-brain tendencies — my favorite roles are those where I can be the “glue” between teams, and hop into whatever part of the process needs a fresh perspective.")]), _vm._v(" "), _c('p', [_vm._v("But also, I personally believe that cross-disciplinary experience is crucial to creating truly awesome experiences.")]), _vm._v(" "), _c('p', [_vm._v("I'm a huge advocate for being a great generalist: I've found that diving into the deep end of web development makes me a better designer, communicator, and advocate for the user. Understanding how routes work makes me a better information architect; understanding how hierarchy and whitespace affect information recall makes me a better developer. After four years in the industry, I've learned that being able to \"speak\" designer and developer is a magical secret sauce that makes projects more fun, more profitable, and less stressful.")])]), _vm._v(" "), _c('div', {
     staticClass: "stack"
   }, [_c('h5', {
     staticClass: "subtitle"
@@ -33449,11 +33453,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "https://www.ccs.ucsb.edu/what-is-ccs",
       "target": "_blank"
     }
-  }, [_vm._v("College of Creative Studies, UCSB")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in English Literature")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in Evolutionary Biology")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('p', [_vm._v("Before I'd really heard of Cognitive Science, I managed to hack my own CogSci curriculum out of evolutionary biology & English literature classes.")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('h5', {
+  }, [_vm._v("College of Creative Studies, UCSB")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in English Literature")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in Evolutionary Biology")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('p', [_vm._v("Before I'd really heard of Cognitive Science, I inadvertently hacked my own CogSci curriculum out of evolutionary biology & English literature classes.")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('h5', {
     staticClass: "subtitle"
   }, [_vm._v("C.V.")]), _vm._v(" "), _c('ul', {
     staticClass: "stack-list"
-  }, [_c('li', [_c('b', [_vm._v("Communications Designer & Assistant")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("Texas Public Policy Foundation")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("Emergent Order")])])])])]), _vm._v(" "), _c('div', {
+  }, [_c('li', [_c('b', [_vm._v("Communications Assistant @ Texas Public Policy Foundation")])]), _vm._v(" "), _c('p', [_vm._v("I started my career at a non-profit, public policy organization where I designed graphics, documents & posters, crafted press releases, tracked media hits, wrote scripts, shot interviews, recorded podcasts, edited in Final Cut, and managed relationships with 8,000+ followers on social media. I also project-managed the internal side of a massive, award-winning website redesign, and founded the in-house analytics program (to this day, the database TPPF uses to track media metrics is still colloquially called \"Holodeck\" — for which I proudly claim credit "), _c('img', {
+    attrs: {
+      "width": "20px",
+      "src": "dist/images/noun_54427.png"
+    }
+  }), _vm._v(").")]), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer @ Emergent Order")])]), _vm._v(" "), _c('p', [_vm._v("I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design processes on Virtual Reality apps, massive content site overhauls, organizational re-branding projects, and marketing campaigns.")])]), _vm._v(" "), _c('p', [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "href": ""
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-cloud-download"
+  }), _vm._v("  Download Resume")])])])]), _vm._v(" "), _c('div', {
     staticClass: "cool-thing-1"
   }, [_c('div', {
     staticClass: "image-with-caption"
@@ -33461,12 +33477,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "src": "dist/images/screen-5.jpg"
     }
-  }), _vm._v(" "), _c('p', [_vm._v("Hey look, an app I designed! See the final version at "), _c('a', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "caption"
+  }, [_c('p', [_vm._v("One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness of farm animal living conditions, in tandem with the release of a feature documentary. See the final version at "), _c('a', {
     attrs: {
       "target": "_blank",
       "href": "http://attheforkfilm.com/app"
     }
-  }, [_vm._v("At the Fork Film")]), _vm._v(".")])])])])
+  }, [_vm._v("At the Fork Film")]), _vm._v(".")])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -34203,7 +34221,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#"
     }
-  }, [_vm._v("Back to Top")])])], 2) : _vm._e()
+  }, [_c('i', {
+    staticClass: "fa fa-angle-double-up"
+  }), _vm._v(" Back to Top")])])], 2) : _vm._e()
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "sidebar-item"

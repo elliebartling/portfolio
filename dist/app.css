@@ -95,6 +95,27 @@ pre code.hljs {
   border-radius: 4px;
   border-color: transparent;
 }
+.btn-primary {
+  border-radius: 0px;
+  background: rgba(0,0,0,0.8);
+  border-color: transparent;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #000;
+}
+.btn-primary:active,
+.btn-primary:focus {
+  background: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+}
 body {
   padding-top: 60px;
 }
@@ -418,23 +439,19 @@ footer.navbar p {
 }
 @media only screen and (min-width: 992px) {
   #hi-im-ellen .why-both .text {
-    margin-right: 60px;
     max-width: 41.66666666666667%;
   }
 }
 #hi-im-ellen .why-both .stack {
   max-width: 50%;
-  margin-right: 0px;
-  padding: 30px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 40px;
   text-align: left;
   width: 100%;
   margin-right: 0px;
 }
 @media only screen and (min-width: 992px) {
   #hi-im-ellen .why-both .stack {
-    max-width: 25%;
+    max-width: 16.666666666666664%;
   }
 }
 #hi-im-ellen .why-both .stack .stack-list {
@@ -444,7 +461,7 @@ footer.navbar p {
 }
 @media only screen and (min-width: 992px) {
   #hi-im-ellen .why-both .stack:last-of-type {
-    max-width: 25%;
+    max-width: 41.66666666666667%;
   }
 }
 #hi-im-ellen .why-both .image {
@@ -473,14 +490,21 @@ footer.navbar p {
   right: 20px;
   width: 200px;
 }
-.image-with-caption {
+.image-with-caption .caption {
   background: #fff;
+  position: relative;
+  top: -40px;
+  left: 40px;
+  max-width: 700px;
+  padding: 10px;
 }
 .image-with-caption img {
   max-width: 100%;
 }
 .image-with-caption p {
-  padding: 10px 20px;
+  padding: 10px 10px;
+  margin-bottom: 0px;
+  max-width: 700px;
 }
 .sidebar {
   display: none;
@@ -630,6 +654,10 @@ footer.navbar p {
       -ms-flex-align: start;
           align-items: flex-start;
   background: #dedede;
+  min-height: calc(100vh - 120px);
+}
+#work .body {
+  margin-top: 0;
 }
 #work .work-item {
   background: #fff;
