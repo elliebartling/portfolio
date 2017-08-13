@@ -33371,6 +33371,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hi',
@@ -33400,7 +33416,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "src": "dist/images/me_and_gunner.png"
     }
-  })]), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('p', {
+    staticStyle: {
+      "margin-top": "12px",
+      "font-size": ".9rem",
+      "max-width": "700px"
+    }
+  }, [_c('em', [_vm._v("My dog, Gunner, is not nearly as excited about learning \"high-five\" as I am. "), _c('a', {
+    attrs: {
+      "href": "https://www.instagram.com/elliembartling",
+      "target": "_blank"
+    }
+  }, [_vm._v("Click here")]), _vm._v(" for more photos of Gunner being not nearly as excited as I am about things.")])])]), _vm._v(" "), _c('div', {
     staticClass: "text"
   }, [_c('h2', {
     staticClass: "title"
@@ -33427,12 +33454,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&qid=1500250928&sr=8-1&keywords=the+blank+slate"
     }
   }, [_vm._v("The Blank Slate")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "cool-thing thing-atfvr"
+  }, [_c('img', {
+    attrs: {
+      "src": "dist/images/at-the-fork-vr-portrait.png"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "caption col-4"
+  }, [_c('h4', {
+    staticClass: "subtitle"
+  }, [_vm._v("At the Fork VR")]), _vm._v(" "), _c('p', [_vm._v("One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness about the living conditions of America's farm animals. We released the app in tandem with a feature documentary, a website (which I designed and built), and a marketing campaign. See the final version at "), _c('a', {
+    attrs: {
+      "target": "_blank",
+      "href": "http://attheforkfilm.com/app"
+    }
+  }, [_vm._v("At the Fork Film")]), _vm._v(", and my "), _c('a', {
+    attrs: {
+      "href": ""
+    }
+  }, [_vm._v("case-study here")]), _vm._v(".")])])]), _vm._v(" "), _c('div', {
     staticClass: "why-both"
   }, [_c('div', {
     staticClass: "text"
   }, [_c('h2', {
     staticClass: "title"
-  }, [_vm._v("I'm a Designer + a Developer")]), _vm._v(" "), _c('p', [_vm._v("Why design & develop? First: grappling with every part of the process, from market research to CSS transitions, is incredibly rewarding. I love getting to indulge my right-brain and left-brain tendencies — my favorite roles are those where I can be the “glue” between teams, and hop into whatever part of the process needs a fresh perspective.")]), _vm._v(" "), _c('p', [_vm._v("But also, I personally believe that cross-disciplinary experience is crucial to creating truly awesome experiences.")]), _vm._v(" "), _c('p', [_vm._v("I'm a huge advocate for being a great generalist: I've found that diving into the deep end of web development makes me a better designer, communicator, and advocate for the user. Understanding how routes work makes me a better information architect; understanding how hierarchy and whitespace affect information recall makes me a better developer. After four years in the industry, I've learned that being able to \"speak\" designer and developer is a magical secret sauce that makes projects more fun, more profitable, and less stressful.")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("I design, build, & write — a lot.")]), _vm._v(" "), _c('p', [_vm._v("In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a "), _c('i', [_vm._v("lot")]), _vm._v(" more than designing.")]), _vm._v(" "), _c('p', [_vm._v("After four years in the industry, I’ve found that honing other skills makes me a much better designer and team player: learning how javascript routers work has made me a better information architect; playing with Vue.js has taught me the power of modularity and component-driven design; honing my writing has made me better at interviewing, and finding and communicating insights from user research; optimizing pages for load speed has made me better at making smarter tradeoffs between form and function; and spending hours working through code has made be a better colleague, communicator, and project manager (there is nothing quite so demoralizing as getting trapped in Dependency Hell, and nothing quite as frustrating as spending time on a feature that ultimately isn’t needed).")])]), _vm._v(" "), _c('div', {
     staticClass: "stack"
   }, [_c('h5', {
     staticClass: "subtitle"
@@ -33453,16 +33499,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "https://www.ccs.ucsb.edu/what-is-ccs",
       "target": "_blank"
     }
-  }, [_vm._v("College of Creative Studies, UCSB")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in English Literature")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in Evolutionary Biology")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('p', [_vm._v("Before I'd really heard of Cognitive Science, I inadvertently hacked my own CogSci curriculum out of evolutionary biology & English literature classes.")])]), _vm._v(" "), _c('p'), _vm._v(" "), _c('h5', {
+  }, [_vm._v("College of Creative Studies, UCSB")])]), _vm._v(" "), _c('li', [_c('em', [_vm._v("B.A. in English Literature, B.A. in Evolutionary Biology")])]), _vm._v(" "), _c('p')]), _vm._v(" "), _c('p'), _vm._v(" "), _c('h5', {
     staticClass: "subtitle"
   }, [_vm._v("C.V.")]), _vm._v(" "), _c('ul', {
     staticClass: "stack-list"
-  }, [_c('li', [_c('b', [_vm._v("Communications Assistant @ Texas Public Policy Foundation")])]), _vm._v(" "), _c('p', [_vm._v("I started my career at a non-profit, public policy organization where I designed graphics, documents & posters, crafted press releases, tracked media hits, wrote scripts, shot interviews, recorded podcasts, edited in Final Cut, and managed relationships with 8,000+ followers on social media. I also project-managed the internal side of a massive, award-winning website redesign, and founded the in-house analytics program (to this day, the database TPPF uses to track media metrics is still colloquially called \"Holodeck\" — for which I proudly claim credit "), _c('img', {
+  }, [_c('li', [_c('b', [_vm._v("Communications Assistant @ Texas Public Policy Foundation")])]), _vm._v(" "), _c('p', [_vm._v("I started my career at a non-profit, public policy organization where I designed graphics, documents & posters, crafted press releases, tracked media hits, wrote scripts, shot interviews, recorded podcasts, edited in Final Cut, and managed relationships with 8,000+ followers on social media. I also project-managed the internal side of an award-winning website redesign, and founded the in-house analytics program (to this day, the program is still colloquially called \"Holodeck\" — for which I proudly claim credit "), _c('img', {
     attrs: {
       "width": "20px",
       "src": "dist/images/noun_54427.png"
     }
-  }), _vm._v(").")]), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer @ Emergent Order")])]), _vm._v(" "), _c('p', [_vm._v("I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design processes on Virtual Reality apps, massive content site overhauls, organizational re-branding projects, and marketing campaigns.")])]), _vm._v(" "), _c('p', [_c('button', {
+  }), _vm._v(").")]), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer @ Emergent Order")])]), _vm._v(" "), _c('p', [_vm._v("I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design projects on Virtual Reality apps, content site overhauls, organizational re-branding projects, and marketing campaigns.")])]), _vm._v(" "), _c('p', [_c('button', {
     staticClass: "btn btn-primary",
     attrs: {
       "href": ""
@@ -33470,21 +33516,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('i', {
     staticClass: "fa fa-cloud-download"
   }), _vm._v("  Download Resume")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "cool-thing-1"
+    staticClass: "latest"
+  }, [_c('h5', {
+    staticClass: "subtitle"
+  }, [_vm._v("Latest Posts")]), _vm._v(" "), _c('div', {
+    staticClass: "row"
   }, [_c('div', {
-    staticClass: "image-with-caption"
-  }, [_c('img', {
+    staticClass: "text"
+  }, [_c('h2', {
+    staticClass: "title"
+  }, [_vm._v("Quick Project: Tracking video views in Airtable")]), _vm._v(" "), _c('p', [_vm._v("Emergent Order started life as a video production house. We’ve made award-winning documentaries, television ads, parody videos, mini-docs — oh, and music videos featuring rap battles between dead economists.")]), _vm._v(" "), _c('p', [_vm._v("As our list of multi-million-view hits grows, it’s become increasingly cumbersome to track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal database app, I decided to write a quick node.js script that aggregates our views for us.")])]), _vm._v(" "), _c('div', {
+    staticClass: "text"
+  }, [_c('h2', {
+    staticClass: "title"
+  }, [_c('a', {
     attrs: {
-      "src": "dist/images/screen-5.jpg"
+      "href": "/work/cat-merrick-studios"
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "caption"
-  }, [_c('p', [_vm._v("One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness of farm animal living conditions, in tandem with the release of a feature documentary. See the final version at "), _c('a', {
-    attrs: {
-      "target": "_blank",
-      "href": "http://attheforkfilm.com/app"
-    }
-  }, [_vm._v("At the Fork Film")]), _vm._v(".")])])])])])
+  }, [_vm._v("Cat Merrick Studios")])]), _vm._v(" "), _c('p', [_vm._v("UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — on purpose.")]), _vm._v(" "), _c('p', [_vm._v("Utterly baffling for me, a UX designer, whose entire job is about making things easy to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, “If you have to ask [how it works], you can’t afford it” — but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.")])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -33985,7 +34034,7 @@ module.exports = "<h1 id=\"should-designers-learn-to-code-\">Should designers le
 /* 151 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"quick-project-tracking-video-views-in-airtable\">Quick Project: Tracking video views in Airtable</h1>\n<p><a href=\"http://www.emergentorder.com\">Emergent Order</a>, where I work, started life as a video production house. We’ve made award-winning <a href=\"http://www.attheforkfilm.com\">documentaries</a>, television ads, <a href=\"www.artists4america.org/sharewars\">parody videos</a>, mini-docs — oh, and <a href=\"https://www.youtube.com/watch?v=GTQnarzmTOc\">music videos</a> featuring rap battles between dead economists.</p>\n<p>As our list of multi-million-view hits grows, it’s become increasingly cumbersome to  track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal <a href=\"www.airtable.com\">database app</a>, I decided to write a quick node.js script that aggregates our views for us.</p>\n<pre><code>// Pull API keys from the .env file\n// Hooray 12-factor best practices :)\nrequire(&#39;dotenv&#39;).config()\n\n/* --------------------------\n/* Initiate class libraries\n/* --------------------------\n/* Airtable\n/* YouTube \n/* jsonfile - for reading/writing json to datafiles\n/* VideoId - for pulling video ids from urls\n/* ------------------------- */\n\nvar Airtable = require(&#39;airtable&#39;)\nvar jsonfile = require(&#39;jsonfile&#39;)\nvar YouTube = require(&#39;youtube-node&#39;)\nconst getVideoId = require(&#39;get-video-id&#39;)\n\n// Init YouTube object &amp; authenticate\nvar youTube = new YouTube()\nyouTube.setKey(process.env.GOOGLE_API_KEY)\n\n// Ignore: JSON storage for testing\nvar data = &#39;data/views.json&#39; \n\n// Blank array to hold our Video data\nvar videos = []\n\n// Init our Airtable connection\nvar base = new Airtable({\n        apiKey: process.env.AIRTABLE_API_KEY\n    }).base(&#39;appjx8uwRv4srcesm&#39;);\n\n// Grab our table from our Airtable Base\nbase(&#39;Placements&#39;).select({\n    // maxRecords: 1,\n    filterByFormula: &quot;NOT({URL} = &#39;&#39;)&quot;\n}).eachPage(function page(records, fetchNextPage) {\n\n    // This function (`page`) will get called for each page of records.\n    records.forEach(function(record) {\n\n        // Get the video ID of each video &amp; the last (manually added) Viewcount\n        var video = getVideoId(record.get(&#39;URL&#39;))\n        var count = record.get(&#39;Viewcount&#39;)\n\n        // Create an empty placeholder video variable\n        var v = { video: video, views: count, newViews: &#39;&#39; }\n\n        // If the video is YouTube (getVideoId returns NOT undefined)\n        if (video) {\n\n          // Ask the YouTube API for stats pretty plz\n          youTube.getById(video[&#39;id&#39;], function (error, result) {\n\n            // If error, log it\n            if (error) {\n              console.log(error);\n            } else {\n\n              // If it&#39;s a YouTube playlist object, evaluate the first item in the list\n              if (result.items.length &gt; -1) {\n\n                // Change ViewCount (a string) into a number for Airtable\n                v.newViews = parseInt(result.items[0].statistics.viewCount)\n                // Add to videos array\n                videos.push(v)\n\n                // Write to JSON file for debugging\n                jsonfile.writeFile(data, videos, function(err) {\n                    console.error(err)\n                });\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n\n              } else {\n\n                // Otherwise just get the stats for this video\n                v.newViews = result.statistics.viewCount\n                videos.push(v)\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n              }\n            }\n          })\n        }\n    });\n    fetchNextPage();\n});\n</code></pre>";
+module.exports = "<h1 id=\"quick-project-tracking-video-views-in-airtable\">Quick Project: Tracking video views in Airtable</h1>\n<p><a href=\"http://www.emergentorder.com\">Emergent Order</a> started life as a video production house. We’ve made award-winning <a href=\"http://www.attheforkfilm.com\">documentaries</a>, television ads, <a href=\"www.artists4america.org/sharewars\">parody videos</a>, mini-docs — oh, and <a href=\"https://www.youtube.com/watch?v=GTQnarzmTOc\">music videos</a> featuring rap battles between dead economists.</p>\n<p>As our list of multi-million-view hits grows, it’s become increasingly cumbersome to  track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal <a href=\"www.airtable.com\">database app</a>, I decided to write a quick node.js script that aggregates our views for us.</p>\n<pre><code>// Pull API keys from the .env file\n// Hooray 12-factor best practices :)\nrequire(&#39;dotenv&#39;).config()\n\n/* --------------------------\n/* Initiate class libraries\n/* --------------------------\n/* Airtable\n/* YouTube\n/* jsonfile - for reading/writing json to datafiles\n/* VideoId - for pulling video ids from urls\n/* ------------------------- */\n\nvar Airtable = require(&#39;airtable&#39;)\nvar jsonfile = require(&#39;jsonfile&#39;)\nvar YouTube = require(&#39;youtube-node&#39;)\nconst getVideoId = require(&#39;get-video-id&#39;)\n\n// Init YouTube object &amp; authenticate\nvar youTube = new YouTube()\nyouTube.setKey(process.env.GOOGLE_API_KEY)\n\n// Ignore: JSON storage for testing\nvar data = &#39;data/views.json&#39;\n\n// Blank array to hold our Video data\nvar videos = []\n\n// Init our Airtable connection\nvar base = new Airtable({\n        apiKey: process.env.AIRTABLE_API_KEY\n    }).base(&#39;appjx8uwRv4srcesm&#39;);\n\n// Grab our table from our Airtable Base\nbase(&#39;Placements&#39;).select({\n    // maxRecords: 1,\n    filterByFormula: &quot;NOT({URL} = &#39;&#39;)&quot;\n}).eachPage(function page(records, fetchNextPage) {\n\n    // This function (`page`) will get called for each page of records.\n    records.forEach(function(record) {\n\n        // Get the video ID of each video &amp; the last (manually added) Viewcount\n        var video = getVideoId(record.get(&#39;URL&#39;))\n        var count = record.get(&#39;Viewcount&#39;)\n\n        // Create an empty placeholder video variable\n        var v = { video: video, views: count, newViews: &#39;&#39; }\n\n        // If the video is YouTube (getVideoId returns NOT undefined)\n        if (video) {\n\n          // Ask the YouTube API for stats pretty plz\n          youTube.getById(video[&#39;id&#39;], function (error, result) {\n\n            // If error, log it\n            if (error) {\n              console.log(error);\n            } else {\n\n              // If it&#39;s a YouTube playlist object, evaluate the first item in the list\n              if (result.items.length &gt; -1) {\n\n                // Change ViewCount (a string) into a number for Airtable\n                v.newViews = parseInt(result.items[0].statistics.viewCount)\n                // Add to videos array\n                videos.push(v)\n\n                // Write to JSON file for debugging\n                jsonfile.writeFile(data, videos, function(err) {\n                    console.error(err)\n                });\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n\n              } else {\n\n                // Otherwise just get the stats for this video\n                v.newViews = result.statistics.viewCount\n                videos.push(v)\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n              }\n            }\n          })\n        }\n    });\n    fetchNextPage();\n});\n</code></pre>";
 
 /***/ }),
 /* 152 */
