@@ -515,8 +515,8 @@ footer.navbar p {
   position: relative;
 }
 #hi-im-ellen .cool-thing.thing-atfvr img {
-  max-height: 90vh;
-  margin-bottom: 40px;
+  max-width: 100%;
+  margin-bottom: 60px;
 }
 .image-with-caption .caption {
   background: #fff;
@@ -534,18 +534,34 @@ footer.navbar p {
   margin-bottom: 0px;
   max-width: 700px;
 }
-#hi-im-ellen .latest .subtitle {
-  margin-bottom: 40px;
+#hi-im-ellen .latest .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+@media only screen and (min-width: 576px) {
+  #hi-im-ellen .latest .wrapper {
+    padding: 60px;
+    padding-top: 30px;
+  }
 }
 #hi-im-ellen .latest .text {
   max-width: 100%;
   width: 100%;
   margin-right: 24px;
 }
-@media only screen and (min-width: 992px) {
-  #hi-im-ellen .latest .text {
-    max-width: calc((6 / 12 * 100%) - 24px);
-  }
+#hi-im-ellen .latest .text:last-of-type {
+  margin-right: 0px;
 }
 .sidebar {
   display: none;

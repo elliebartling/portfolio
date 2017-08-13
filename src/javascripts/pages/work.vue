@@ -11,7 +11,7 @@
       <!-- <scroll-active ref="scrollactive" class="my-nav"> -->
         <ul class="sidebar-item">
           <li v-for="w in work">
-            <router-link :to="'/work/' + w.slug" class="skill-link">{{ w.slug | humanize }}</router-link>
+            <router-link :to="'work/' + w.slug" class="skill-link">{{ w.slug | humanize }}</router-link>
           </li>
         </ul>
       <!-- </scroll-active> -->

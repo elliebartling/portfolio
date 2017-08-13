@@ -4634,7 +4634,7 @@ module.exports = function normalizeComponent (
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = [{"slug":"at-the-fork-virtual-reality","title":"At the Fork","tags":["user experience design","visual design"],"content":"<html><head></head><body><h1 id=\"at-the-fork\">At the Fork</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n</ul>\n<p><img src=\"images/at-the-fork-virtual-reality/screen-5.jpg\" alt=\"\"></p>\n</body></html>"},{"slug":"cat-merrick-studios","title":"Cat Merrick Studios","tags":["user experience design","visual design","front-end dev"],"content":"<html><head></head><body><h1 id=\"cat-merrick-studios\">Cat Merrick Studios</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>front-end dev</li>\n</ul>\n<blockquote>\n<p><strong>Cat&#x2019;s Evaluation:</strong><br>&#x201C;I couldn&apos;t be happier. Expectations blown out of the water.&#x201D;  </p>\n</blockquote>\n<p>UI design in the high-fashion world is very complex. As Cat &#x2014; a super friendly, brilliant industrial designer who&#x2019;s breaking into the jewelry scene later this year &#x2014; explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing &#x2014; <em>on purpose.</em></p>\n<p>Utterly baffling for me, a UX designer, whose entire job is about making things <strong>easy</strong> to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, &#x201C;If you have to ask [how it works], you can&#x2019;t afford it&#x201D; &#x2014; but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.</p>\n<p>I was totally hooked: Cat herself is warm, open, friendly, brimming with creativity and gusto and tech-industry-like disruptiveness. It&#x2019;s a huge part of her brand, her work, and her style. But the industry she&#x2019;s about to disrupt is stark, minimalist, and has a bit of a &#x201C;fuck you&#x201D; attitude to outsiders and those who don&#x2019;t immediately come across as &#x201C;one of them.&#x201D;</p>\n<p>How do you marry those two totally different dynamics in a single website? What an awesome and fascinating design challenge.</p>\n<p><img src=\"images/cat-merrick-studios/early-wireframe.png\" alt=\"\">\n<em>An early in-situ wireframe.</em></p>\n<h3 id=\"the-requirements\">The Requirements</h3>\n<ol>\n<li><p>Cat wanted to be able to showcase her products by type, but didn&#x2019;t want her shop to feel too sparse by splitting things up into groups.</p>\n</li>\n<li><p>She wanted the site to be easy to understand and navigate, but not feel out of place among websites that adhered to extreme minimalism, sometimes at the expense of what we both recognized as usability best practices.</p>\n</li>\n<li><p>She wanted to be able to use gifs and videos as the &#x201C;featured&#x201D; image for products, which is a feature Shopify doesn&#x2019;t support out of the box.</p>\n</li>\n<li><p>She wanted to have a password-protected wholesale version of some, but not all, of the products.</p>\n</li>\n<li><p>She needed to be able to maintain all of this on her own, quickly and easily through the Shopify CMS. If at all possible, I wanted to avoid giving her something else to have to log into.</p>\n</li>\n</ol>\n<h3 id=\"challenges\">Challenges</h3>\n<p>The first round of design included elements (above) with bold Geomanist font, dramatic diagonals, and interesting product photography. The basic elements of Cat&#x2019;s in-progress brand were there &#x2014; monochrome color scheme, focus on photography, geometric typeface &#x2014; but it wasn&#x2019;t quite right for her target audience. All of Cat&#x2019;s pieces are hand-designed and individually crafted, and the big-box-store UX patterns had far too much of a &#x201C;polished&#x201D; and commercial feel.</p>\n<p><img src=\"images/cat-merrick-studios/first-round.png\" alt=\"\">\n<em>On the right path, but ultimately too commercial.</em></p>\n<p>On the UX and tech side, we were playing a long game of technology tetris: Cat needed to have a password-protected wholesale section, with separate pricing structures for her products, and at some point in the future was considering opening up a home goods line. But until then, we wanted to make sure the site didn&#x2019;t feel empty or oddly organized. </p>\n<p>For non-bulk buyers, was a &#x201C;wholesale&#x201D; nav item distracting? What was the best way to organize products into categories and subcategories, and what was the best way to accomplish that in Shopify (which, we discovered, has significant security limitations when pulling product info via AJAX)? Because Cat was simultaneously designing and creating new products while we were designing and prototyping the site, the information architecture quickly became a sort of &#x201C;chicken-and-egg&#x201D; problem.</p>\n<p><img src=\"images/cat-merrick-studios/screenshot-2.png\" alt=\"\"></p>\n<h3 id=\"solutions\">Solutions</h3>\n<p>Ultimately, we settled on a single-page design for the jewelry collection, split into sections by Shopify sub-collections. This felt like the best of both worlds: show the user all of Cat&#x2019;s products to keep the page feeling full, but maintain organization and structure. We tried a few different iterations of &#x201C;filters&#x201D; by various product attributes, but ultimately, there just weren&#x2019;t enough products to filter by and they felt distracting. To keep load times down, I implemented some AJAX to dynamically load the next section as the user scrolled.</p>\n<p>Visually, we found our mark with Avenir Next, which had just the right amount of structure to feel classy without feeling overly minimalist (like straight Helvetica) or too commercial (like Geomanist). Thick black lines and bold black buttons kept key calls-to-action prominent and top-of-mind. Everything else was stripped down to give more prominence to the product photography (all screenshots are using sample photos).</p>\n<p>I was also able to add metafields to Shopify products so that Cat could upload gifs, embed YouTube links, add &#x201C;product stories&#x201D; &#x2014; about the story behind each piece &#x2014; and dictate different photos for different parts of the site.</p>\n<p>And to keep time-on-site up, I added another &#x201C;infinite-scroll&#x201D; feature to the single product page, plus some javascript to make the product information &#x201C;sticky&#x201D;:</p>\n<p><img src=\"images/cat-merrick-studios/ezgif-3-541a428016.gif\" alt=\"\"></p>\n<p>I&#x2019;m particularly excited about how this individual product page turned out: because of limitations on how Shopify makes product data available, it took some figuring to add infinite scroll to individual product pages. As it turns out, unless you want to create your own Shopify Admin app, front-end scripts don&#x2019;t have API access to product data &#x2014; trying to pass (clean) product data to a Vue component turned out to be way more complicated than was worth it, and  in the end, I switched the project back to jQuery:</p>\n<pre><code>function getNextProduct () {\n    // Only get next product once\n    tryLoadingNextProduct = false\n\n    /* We&apos;ve used Shopify&apos;s built in &quot;next product in collection&quot; feature\n    /* to add a hidden &lt;a&gt; tag at the bottom of the current product\n    /* Now, we just need to find that next product link on this page */\n    var nextProductLink = $(&apos;#next-product&apos;)\n\n    if (nextProductLink.length &gt; 0) {\n      // Okay Ajax, do your thing.\n      $.get({ url: nextProductLink.find(&apos;a&apos;).attr(&apos;href&apos;) }, function (data) {\n\n     // Find the product container on the next page\n        var next = $(data).find(&apos;.product-container&apos;)\n        var id = next.data(&apos;product-id&apos;)\n        var nextTitle = $(`&lt;div class=&apos;next-product-header&apos;&gt;Next:&amp;nbsp;&lt;/div&gt;`)\n\n        // Append it to this page\n        nextTitle.insertAfter(&apos;.product-container:last-of-type&apos;)\n        nextTitle.append($(data).find(&apos;h1#product-title&apos;).html())\n\n        next.insertAfter(&apos;.next-product-header:last-of-type&apos;)\n\n        nextProductLink.removeAttr(&apos;id&apos;) // You&apos;re not the &quot;next&quot; anymore, link.\n\n        layoutProductImages() // Lay out images again\n\n        // Stickify the menu container\n        if ($(window).width() &gt; 768) {\n          $(&apos;.product-container:last-of-type .product-description-main&apos;).stick_in_parent()\n        }\n\n        // Swap out gross selectboxes for pretty ones\n        $(&apos;.selectify&apos;).select2({ width: &apos;auto&apos; })\n\n        $(&apos;select&apos;).on(&apos;select2:select&apos;, function(event) {\n          onSelectChange($(this))\n        })\n\n        getProductData(id)\n\n        tryLoadingNextProduct = true\n\n      })\n    }\n\n  }\n</code></pre><p>Ultimately, I think what we built is going to be a huge success, and I can&#x2019;t wait to see her line launch later this year.</p>\n</body></html>"},{"slug":"free-together","title":"Free Together","tags":[],"content":"<html><head></head><body><h1 id=\"free-together\">Free Together</h1>\n</body></html>"},{"slug":"my-magic-mud","title":"My Magic Mud","tags":[],"content":"<html><head></head><body><h1 id=\"my-magic-mud\">My Magic Mud</h1>\n</body></html>"},{"slug":"social-evolution","title":"Social Evolution","tags":["user experience design","visual design","front-end dev"],"content":"<html><head></head><body><h1 id=\"social-evolution\">Social Evolution</h1>\n<p>Finished Website: <a href=\"http://social-evolution.com/\">Social Evolution</a></p>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>front-end dev</li>\n</ul>\n<p><img src=\"images/social-evolution/prospectus.png\" alt=\"\"></p>\n<h2 id=\"the-requirements\">The Requirements</h2>\n<ol>\n<li><p>A front-facing website that shows (and tells) the story of a disruptive, tech-focused non-profit that&#x2019;s about to change the world.</p>\n</li>\n<li><p>A back-end, invite-only web app that gives users access to a curated list of projects they might be interested in supporting.</p>\n</li>\n<li><p>Customizable everything: colors, font-positioning, images, blend mode, blend intensity.</p>\n</li>\n<li><p>Fast, quickly deployable, and easy for non-tech users to edit &amp; add content to.</p>\n</li>\n</ol>\n</body></html>"},{"slug":"texas-millennial-institute","title":"Texas Millennial Institute","tags":["visual design","branding"],"content":"<html><head></head><body><h1 id=\"texas-millennial-institute\">Texas Millennial Institute</h1>\n<ul>\n<li>visual design</li>\n<li>branding</li>\n</ul>\n<p>There are a ton of public policy organizations that want to talk to Millennials; very few are actually <em>run</em> by millennials. When the founders of the Texas Millennial Institute decided they wanted to create their own non-profit and forge their own path (complete with a new brand identity), they knew one thing for certain: they didn&#x2019;t want their audience to think they were boring, stale, or, worst of all, <em>old</em>. </p>\n<p><img src=\"images/texas-millennial-institute/screenshot.png\" alt=\"\">\n<em>TMI&#x2019;s first website, with their old logo.</em></p>\n<p>One of the interesting challenges of working with non-profit organizations is that they have to serve two masters: their audience, and their donors. For TMI, this meant their branding needed to be playful, fun, and genuinely &#x201C;Millennial&#x201D; &#x2014; but it also needed to signal that they were the kind of organization that was serious and professional enough to be trusted with grants and donations. Balancing this line was especially important for TMI, whose entire organization is run by younger officers, and whose mission is to host events that genuinely engage with issues that Texan millennials care about.</p>\n<p><img src=\"images/texas-millennial-institute/SocialProfile-Blue.jpg\" alt=\"\"></p>\n<p>After a few back-and-forths over how to balance the line between professionalism and genuineness, I presented the TMI team with this mark &#x2014; a playfully rounded Texas icon, with a chat bubble coming from El Paso. The light blue and rounded features keeps it feeling young and exciting, but the clean shapes and monotone color palette keeps the brand from feeling messy or disorganized.</p>\n<p>We tried a number of different typefaces &#x2014; from Proxima Nova, to a grainy, almost comic-book style sans &#x2014; and settled on Brandon Grotesque. Geometric and structured, but with a hint of rounded corners, I think Brandon balances out TMI&#x2019;s competing mandates particularly well. </p>\n<p>In TMI&#x2019;s extended branding kit, the mark becomes extremely flexible: it&#x2019;s recognizably &#x201C;TMI&#x201D; even when the chat bubble is filled with other text, like a teaser for their latest events&#x2019; content, or an ad for their organization&#x2019;s mailing list. </p>\n<p>A few examples of extended branding that I produced for them:</p>\n<p><img src=\"images/texas-millennial-institute/hero-photo.png\" alt=\"\">\n<em>An ad for TMI&#x2019;s new brand.</em></p>\n<p><img src=\"images/texas-millennial-institute/immigration-fb-desktopHD.jpg\" alt=\"\">\n<em>An event banner for a summit on Immigration Policy.</em></p>\n</body></html>"}]
+module.exports = [{"slug":"at-the-fork-virtual-reality","title":"At the Fork","tags":["user experience design","visual design"],"content":"<html><head></head><body><h1 id=\"at-the-fork\">At the Fork</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n</ul>\n<p>In partnership with Whole Foods Market and the Humane Society of the United States, Emergent Order created a feature documentary that explores how farm animals are raised for our consumption; it&#x2019;s an incredibly nuanced and gorgeous and sensitive film &#x2014; it seeks to understand the conditions in which real animals live, <em>and</em> the economic pressure that American farmers face.</p>\n<p>And after 6 months, when the last interview was filmed and the last cut was color-corrected, it was the digital team&#x2019;s job to make sure people saw it.</p>\n<p>I worked on two deliverables for the distribution &amp; marketing campaigns: a website for the film, and the interaction design for a 3D virtual reality app that explored the farms that the filmmakers visited.</p>\n<p>The VR team concocted some 3D printing wizardry, and created their own rig out of 14 go-pro cameras; the writing team started developing a script that included the main farms from the movie; and my team began sketching.</p>\n<p><img src=\"images/at-the-fork-virtual-reality/HumaneSocietyLA2016Gala7.jpg\" alt=\"\"></p>\n<h3 id=\"the-challenges\">The Challenges</h3>\n<ol>\n<li><p>Americans don&#x2019;t want to watch animals that are in pain. <em>At the Fork</em> isn&#x2019;t that kind of movie, and neither was any of our footage from the VR team, but it was a persistently tricky bias that we had to combat from Day 1: if people thought this was one of those movies with grainy, undercover videos of cows being abused, they didn&#x2019;t want anything to do with it. We had to use design to build trust with our users as quickly as possible &#x2014; and to communicate that this experience was informative, delightful, and emotionally safe. You might learn things about farm animals that made you empathize with them, but you wouldn&#x2019;t feel disturbed, horrified, or grossed out.</p>\n</li>\n<li><p>The transition from 2D to 3D is weird, cumbersome, and can be confusing for first-time users. Part of our marketing plan involved distributing free Google Cardboards in Whole Foods Markets around the country, with QR codes stamped on them that linked to the app. We expected that most users would be first-timers, and we wanted to create a seamless and enjoyable experience, even for VR newbies.</p>\n</li>\n<li><p>We had a lot of stories to tell, and they needed to be modular. Our producer wanted to ensure that users who specifically wanted to learn about pigs could jump right to that part of the story. But knowing that many users wouldn&#x2019;t know what they wanted to see, we also had to make sure that we provided quick access to stories that would be interesting to everyone.</p>\n</li>\n<li><p>We didn&#x2019;t yet have a design schemed; we would need to take the film&#x2019;s poster and transform it into an entire look and feel that would work across the app, a website, emails, brochures and marketing materials.</p>\n</li>\n</ol>\n<p><img src=\"images/at-the-fork-virtual-reality/Explore-DarkRoom.png\" alt=\"\"></p>\n<h3 id=\"user-testing\">User Testing</h3>\n<p>The biggest first hurdle was content organization: we had 5 separate VR videos &#x2014; one for each species the film focused on &#x2014; and one &#x201C;narrative&#x201D; story, comprised of clips from each of the 5 species-centric videos, plus a voice-over.</p>\n<p>We made three key decisions right away:</p>\n<ol>\n<li>We wanted to encourage people to jump into the &#x201C;narrative story&#x201D; first; it was the most compelling and interesting experience, of the 6 videos.</li>\n<li>We wanted to give users the freedom to come back to app and &#x201C;just sit&#x201D; in the environments, if they so chose &#x2014; without any voiceover, or being rushed to the next environment.</li>\n<li>Once a user had inserted their phone into the Google Cardboard, we didn&#x2019;t want to make them take it off.</li>\n</ol>\n<p>After one user test which required users to remove their phone from the Cardboard device to switch to the next movie &#x2014; UGH &#x2014; we came up with what we called &#x201C;The Darkroom.&#x201D; The Darkroom was a VR-based screen that popped up at the end of any of the 3D experiences and allowed a user to select the next story, or exit the VR experience, simply by looking at a particular button. We tried a number of different gesture-based triggers, but &#x201C;the long stare&#x201D; most consistently resulted in desired results. </p>\n<p>Nodding in response to a question (&#x201C;Continue?&#x201D;) was a close runner-up &#x2014; but while it works fine for devices that are strapped to a user&#x2019;s head, it utterly failed for Google Cardboard users, who all nodded their head while holding their device perfectly still.</p>\n<p>For the 2D portion of our design, we prioritized the &#x201C;Narrative&#x201D; experience with layering and typography; key calls to action appeared in pop-over layers. We included a hamburger to keep navigation clear and cross-platform, but we prioritized navigation via discovery. You can see the Invision prototype of our wireframes here:</p>\n<iframe width=\"100%\" height=\"900px\" src=\"https://invis.io/SA4P9KDKR\" frameborder=\"0\" allowfullscreen></iframe>\n\n\n<p><img src=\"images/at-the-fork-virtual-reality/screen-5.jpg\" alt=\"\"></p>\n<h3 id=\"visual-design\">Visual Design</h3>\n<p>The film&#x2019;s movie poster is quirky, fun, and very illustrated; we wanted the website and app to evoke that same playful, charming, and family-friendly aesthetic, without needing to rely to heavily on custom illustrations, which could have easily consumed our entire budget.</p>\n<p>We relied heavily on the poster&#x2019;s iconic green and blue, and bold geometric typography; we paired it with Bitter, a font-face that brought a slightly rustic feel to the site, without feeling too gimmicky. We kept the rest of the visual design clean and minimal to focus on the film&#x2019;s incredible photography.</p>\n<p><img src=\"images/at-the-fork-virtual-reality/at-the-fork-portrait.png\" alt=\"\"></p>\n<p>#case-study</p>\n</body></html>"},{"slug":"cat-merrick-studios","title":"Cat Merrick Studios","tags":["user experience design","visual design","front-end dev"],"content":"<html><head></head><body><h1 id=\"cat-merrick-studios\">Cat Merrick Studios</h1>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>front-end dev</li>\n</ul>\n<blockquote>\n<p><strong>Cat&#x2019;s Evaluation:</strong><br>&#x201C;I couldn&apos;t be happier. Expectations blown out of the water.&#x201D;  </p>\n</blockquote>\n<p>UI design in the high-fashion world is very complex. As Cat &#x2014; a super friendly, brilliant industrial designer who&#x2019;s breaking into the jewelry scene later this year &#x2014; explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing &#x2014; <em>on purpose.</em></p>\n<p>Utterly baffling for me, a UX designer, whose entire job is about making things <strong>easy</strong> to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, &#x201C;If you have to ask [how it works], you can&#x2019;t afford it&#x201D; &#x2014; but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.</p>\n<p>I was totally hooked: Cat herself is warm, open, friendly, brimming with creativity and gusto and tech-industry-like disruptiveness. It&#x2019;s a huge part of her brand, her work, and her style. But the industry she&#x2019;s about to disrupt is stark, minimalist, and has a bit of a &#x201C;fuck you&#x201D; attitude to outsiders and those who don&#x2019;t immediately come across as &#x201C;one of them.&#x201D;</p>\n<p>How do you marry those two totally different dynamics in a single website? What an awesome and fascinating design challenge.</p>\n<p><img src=\"images/cat-merrick-studios/early-wireframe.png\" alt=\"\">\n<em>An early in-situ wireframe.</em></p>\n<h3 id=\"the-requirements\">The Requirements</h3>\n<ol>\n<li><p>Cat wanted to be able to showcase her products by type, but didn&#x2019;t want her shop to feel too sparse by splitting things up into groups.</p>\n</li>\n<li><p>She wanted the site to be easy to understand and navigate, but not feel out of place among websites that adhered to extreme minimalism, sometimes at the expense of what we both recognized as usability best practices.</p>\n</li>\n<li><p>She wanted to be able to use gifs and videos as the &#x201C;featured&#x201D; image for products, which is a feature Shopify doesn&#x2019;t support out of the box.</p>\n</li>\n<li><p>She wanted to have a password-protected wholesale version of some, but not all, of the products.</p>\n</li>\n<li><p>She needed to be able to maintain all of this on her own, quickly and easily through the Shopify CMS. If at all possible, I wanted to avoid giving her something else to have to log into.</p>\n</li>\n</ol>\n<h3 id=\"challenges\">Challenges</h3>\n<p>The first round of design included elements (above) with bold Geomanist font, dramatic diagonals, and interesting product photography. The basic elements of Cat&#x2019;s in-progress brand were there &#x2014; monochrome color scheme, focus on photography, geometric typeface &#x2014; but it wasn&#x2019;t quite right for her target audience. All of Cat&#x2019;s pieces are hand-designed and individually crafted, and the big-box-store UX patterns had far too much of a &#x201C;polished&#x201D; and commercial feel.</p>\n<p><img src=\"images/cat-merrick-studios/first-round.png\" alt=\"\">\n<em>On the right path, but ultimately too commercial.</em></p>\n<p>On the UX and tech side, we were playing a long game of technology tetris: Cat needed to have a password-protected wholesale section, with separate pricing structures for her products, and at some point in the future was considering opening up a home goods line. But until then, we wanted to make sure the site didn&#x2019;t feel empty or oddly organized. </p>\n<p>For non-bulk buyers, was a &#x201C;wholesale&#x201D; nav item distracting? What was the best way to organize products into categories and subcategories, and what was the best way to accomplish that in Shopify (which, we discovered, has significant security limitations when pulling product info via AJAX)? Because Cat was simultaneously designing and creating new products while we were designing and prototyping the site, the information architecture quickly became a sort of &#x201C;chicken-and-egg&#x201D; problem.</p>\n<p><img src=\"images/cat-merrick-studios/screenshot-2.png\" alt=\"\"></p>\n<h3 id=\"solutions\">Solutions</h3>\n<p>Ultimately, we settled on a single-page design for the jewelry collection, split into sections by Shopify sub-collections. This felt like the best of both worlds: show the user all of Cat&#x2019;s products to keep the page feeling full, but maintain organization and structure. We tried a few different iterations of &#x201C;filters&#x201D; by various product attributes, but ultimately, there just weren&#x2019;t enough products to filter by and they felt distracting. To keep load times down, I implemented some AJAX to dynamically load the next section as the user scrolled.</p>\n<p>Visually, we found our mark with Avenir Next, which had just the right amount of structure to feel classy without feeling overly minimalist (like straight Helvetica) or too commercial (like Geomanist). Thick black lines and bold black buttons kept key calls-to-action prominent and top-of-mind. Everything else was stripped down to give more prominence to the product photography (all screenshots are using sample photos).</p>\n<p>I was also able to add metafields to Shopify products so that Cat could upload gifs, embed YouTube links, add &#x201C;product stories&#x201D; &#x2014; about the story behind each piece &#x2014; and dictate different photos for different parts of the site.</p>\n<p>And to keep time-on-site up, I added another &#x201C;infinite-scroll&#x201D; feature to the single product page, plus some javascript to make the product information &#x201C;sticky&#x201D;:</p>\n<p><img src=\"images/cat-merrick-studios/ezgif-3-541a428016.gif\" alt=\"\"></p>\n<p>I&#x2019;m particularly excited about how this individual product page turned out: because of limitations on how Shopify makes product data available, it took some figuring to add infinite scroll to individual product pages. As it turns out, unless you want to create your own Shopify Admin app, front-end scripts don&#x2019;t have API access to product data &#x2014; trying to pass (clean) product data to a Vue component turned out to be way more complicated than was worth it, and  in the end, I switched the project back to jQuery:</p>\n<pre><code>function getNextProduct () {\n    // Only get next product once\n    tryLoadingNextProduct = false\n\n    /* We&apos;ve used Shopify&apos;s built in &quot;next product in collection&quot; feature\n    /* to add a hidden &lt;a&gt; tag at the bottom of the current product\n    /* Now, we just need to find that next product link on this page */\n    var nextProductLink = $(&apos;#next-product&apos;)\n\n    if (nextProductLink.length &gt; 0) {\n      // Okay Ajax, do your thing.\n      $.get({ url: nextProductLink.find(&apos;a&apos;).attr(&apos;href&apos;) }, function (data) {\n\n     // Find the product container on the next page\n        var next = $(data).find(&apos;.product-container&apos;)\n        var id = next.data(&apos;product-id&apos;)\n        var nextTitle = $(`&lt;div class=&apos;next-product-header&apos;&gt;Next:&amp;nbsp;&lt;/div&gt;`)\n\n        // Append it to this page\n        nextTitle.insertAfter(&apos;.product-container:last-of-type&apos;)\n        nextTitle.append($(data).find(&apos;h1#product-title&apos;).html())\n\n        next.insertAfter(&apos;.next-product-header:last-of-type&apos;)\n\n        nextProductLink.removeAttr(&apos;id&apos;) // You&apos;re not the &quot;next&quot; anymore, link.\n\n        layoutProductImages() // Lay out images again\n\n        // Stickify the menu container\n        if ($(window).width() &gt; 768) {\n          $(&apos;.product-container:last-of-type .product-description-main&apos;).stick_in_parent()\n        }\n\n        // Swap out gross selectboxes for pretty ones\n        $(&apos;.selectify&apos;).select2({ width: &apos;auto&apos; })\n\n        $(&apos;select&apos;).on(&apos;select2:select&apos;, function(event) {\n          onSelectChange($(this))\n        })\n\n        getProductData(id)\n\n        tryLoadingNextProduct = true\n\n      })\n    }\n\n  }\n</code></pre><p>Ultimately, I think what we built is going to be a huge success, and I can&#x2019;t wait to see her line launch later this year.</p>\n</body></html>"},{"slug":"social-evolution","title":"Social Evolution","tags":["user experience design","visual design","front-end dev"],"content":"<html><head></head><body><h1 id=\"social-evolution\">Social Evolution</h1>\n<p>Finished Website: <a href=\"http://social-evolution.com/\">Social Evolution</a></p>\n<ul>\n<li>user experience design</li>\n<li>visual design</li>\n<li>front-end dev</li>\n</ul>\n<p><img src=\"images/social-evolution/prospectus.png\" alt=\"\"></p>\n<h2 id=\"the-requirements\">The Requirements</h2>\n<ol>\n<li><p>A front-facing website that shows (and tells) the story of a disruptive, tech-focused non-profit that&#x2019;s about to change the world.</p>\n</li>\n<li><p>A back-end, invite-only web app that gives users access to a curated list of projects they might be interested in supporting.</p>\n</li>\n<li><p>Customizable everything: colors, font-positioning, images, blend mode, blend intensity.</p>\n</li>\n<li><p>Fast, quickly deployable, and easy for non-tech users to edit &amp; add content to.</p>\n</li>\n</ol>\n</body></html>"},{"slug":"texas-millennial-institute","title":"Texas Millennial Institute","tags":["visual design","branding"],"content":"<html><head></head><body><h1 id=\"texas-millennial-institute\">Texas Millennial Institute</h1>\n<ul>\n<li>visual design</li>\n<li>branding</li>\n</ul>\n<p>There are a ton of public policy organizations that want to talk to Millennials; very few are actually <em>run</em> by millennials. When the founders of the Texas Millennial Institute decided they wanted to create their own non-profit and forge their own path (complete with a new brand identity), they knew one thing for certain: they didn&#x2019;t want their audience to think they were boring, stale, or, worst of all, <em>old</em>. </p>\n<p><img src=\"images/texas-millennial-institute/screenshot.png\" alt=\"\">\n<em>TMI&#x2019;s first website, with their old logo.</em></p>\n<p>One of the interesting challenges of working with non-profit organizations is that they have to serve two masters: their audience, and their donors. For TMI, this meant their branding needed to be playful, fun, and genuinely &#x201C;Millennial&#x201D; &#x2014; but it also needed to signal that they were the kind of organization that was serious and professional enough to be trusted with grants and donations. Balancing this line was especially important for TMI, whose entire organization is run by younger officers, and whose mission is to host events that genuinely engage with issues that Texan millennials care about.</p>\n<p><img src=\"images/texas-millennial-institute/SocialProfile-Blue.jpg\" alt=\"\"></p>\n<p>After a few back-and-forths over how to balance the line between professionalism and genuineness, I presented the TMI team with this mark &#x2014; a playfully rounded Texas icon, with a chat bubble coming from El Paso. The light blue and rounded features keeps it feeling young and exciting, but the clean shapes and monotone color palette keeps the brand from feeling messy or disorganized.</p>\n<p>We tried a number of different typefaces &#x2014; from Proxima Nova, to a grainy, almost comic-book style sans &#x2014; and settled on Brandon Grotesque. Geometric and structured, but with a hint of rounded corners, I think Brandon balances out TMI&#x2019;s competing mandates particularly well. </p>\n<p>In TMI&#x2019;s extended branding kit, the mark becomes extremely flexible: it&#x2019;s recognizably &#x201C;TMI&#x201D; even when the chat bubble is filled with other text, like a teaser for their latest events&#x2019; content, or an ad for their organization&#x2019;s mailing list. </p>\n<p>A few examples of extended branding that I produced for them:</p>\n<p><img src=\"images/texas-millennial-institute/hero-photo.png\" alt=\"\">\n<em>An ad for TMI&#x2019;s new brand.</em></p>\n<p><img src=\"images/texas-millennial-institute/immigration-fb-desktopHD.jpg\" alt=\"\">\n<em>An event banner for a summit on Immigration Policy.</em></p>\n</body></html>"}]
 
 /***/ }),
 /* 3 */
@@ -16859,30 +16859,10 @@ return zhTw;
 
 
 /***/ }),
-/* 120 */
-/***/ (function(module, exports) {
-
-module.exports = [{"date":"2017-07-17T16:24:05.000Z","path":"07-16-cms-less-and-it-feels-so-right.md"},{"date":"2017-07-17T04:19:44.000Z","path":"07-16-currently-reading-the-blank-slate.md"},{"date":"2017-07-18T03:24:10.000Z","path":"07-16-should-designers-learn-to-code.md"},{"date":"2017-07-18T03:38:13.000Z","path":"07-17-track-video-views-in-airtable.md"}]
-
-/***/ }),
-/* 121 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/screen-1.png?6b2e529aaaab7967e4d7aaecaa0277dd";
-
-/***/ }),
-/* 122 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/screen-2.png?f9a6ebf47f5ecfc85701a794618582d8";
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/14316417206_4cc28f91a0_b.jpg?3d15dfc8e7c77885d29f50a4df9e2347";
-
-/***/ }),
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16966,6 +16946,7 @@ var Hi = __webpack_require__(136);
 var Work = __webpack_require__(139);
 var WorkSingle = __webpack_require__(142);
 var Blog = __webpack_require__(145);
+var BlogSingle = __webpack_require__(161);
 
 var WorkSidebar = __webpack_require__(153);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('work-sidebar', WorkSidebar);
@@ -16975,7 +16956,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('work-sidebar', WorkSideba
 // either be an actual component constructor created via
 // `Vue.extend()`, or just a component options object.
 // We'll talk about nested routes later.
-var routes = [{ path: '/', component: Hi }, { path: '/hello', component: Hi }, { path: '/work', component: Work }, { path: '/work/:project', component: WorkSingle }, { path: '/blog', component: Blog }];
+var routes = [{ path: '/', component: Hi }, { path: '/hello', component: Hi }, { path: '/work', component: Work }, { path: '/work/:project', component: WorkSingle }, { path: '/blog', component: Blog }, { path: '/blog/:slug', component: BlogSingle }];
 
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
@@ -33387,13 +33368,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hi',
   data: function data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
+    return {};
   }
 });
 
@@ -33402,15 +33393,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('section', {
     attrs: {
       "id": "hi-im-ellen"
     }
   }, [_c('div', {
     staticClass: "hero"
-  }, [_c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "text"
+  }, [_c('h2', {
+    staticClass: "title"
+  }, [_vm._v("Hi, I’m Ellen")]), _vm._v(" "), _c('h4', {
+    staticClass: "subtitle"
+  }, [_vm._v("user experience designer + developer")]), _vm._v(" "), _c('p', [_vm._v("I help organizations engage their users and build their brands through "), _c('router-link', {
+    attrs: {
+      "to": "work/at-the-fork-virtual-reality"
+    }
+  }, [_vm._v("interactive design")]), _vm._v(". I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs.")], 1), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)])]), _vm._v(" "), _c('div', {
+    staticClass: "cool-thing thing-atfvr"
+  }, [_c('img', {
+    attrs: {
+      "src": "dist/images/at-the-fork-vr-portrait.png"
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "caption col-4"
+  }, [_c('h4', {
+    staticClass: "subtitle"
+  }, [_vm._v("At the Fork VR")]), _vm._v(" "), _c('p', [_vm._v("One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness about the living conditions of America's farm animals. We released the app in tandem with a feature documentary, a website (which I designed and built), and a marketing campaign. See the final version at "), _c('a', {
+    attrs: {
+      "target": "_blank",
+      "href": "http://attheforkfilm.com/app"
+    }
+  }, [_vm._v("At the Fork Film")]), _vm._v(", and my "), _c('router-link', {
+    attrs: {
+      "to": "work/at-the-fork-virtual-reality"
+    }
+  }, [_vm._v("case-study here")]), _vm._v(".")], 1)])]), _vm._v(" "), _vm._m(3)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "personal-image"
   }, [_c('img', {
     attrs: {
@@ -33427,22 +33447,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "https://www.instagram.com/elliembartling",
       "target": "_blank"
     }
-  }, [_vm._v("Click here")]), _vm._v(" for more photos of Gunner being not nearly as excited as I am about things.")])])]), _vm._v(" "), _c('div', {
-    staticClass: "text"
-  }, [_c('h2', {
-    staticClass: "title"
-  }, [_vm._v("Hi, I’m Ellen")]), _vm._v(" "), _c('h4', {
-    staticClass: "subtitle"
-  }, [_vm._v("user experience designer + developer")]), _vm._v(" "), _c('p', [_vm._v("I help organizations engage their users and build their brands through "), _c('a', {
-    attrs: {
-      "href": "work/at-the-fork"
-    }
-  }, [_vm._v("interactive design")]), _vm._v(". I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs.")]), _vm._v(" "), _c('p', [_vm._v("Currently, I work with an amazing team at an Austin, TX creative agency called "), _c('a', {
+  }, [_vm._v("Click here")]), _vm._v(" for more photos of Gunner being not nearly as excited as I am about things.")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_vm._v("Currently, I work with an amazing team at an Austin, TX creative agency called "), _c('a', {
     attrs: {
       "target": "_blank",
       "href": "http://www.emergentorder.com"
     }
-  }, [_vm._v("Emergent Order")]), _vm._v(" that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("Emergent Order")]), _vm._v(" that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
     staticClass: "currently-nerding"
   }, [_c('img', {
     attrs: {
@@ -33453,32 +33467,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&qid=1500250928&sr=8-1&keywords=the+blank+slate"
     }
-  }, [_vm._v("The Blank Slate")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "cool-thing thing-atfvr"
-  }, [_c('img', {
-    attrs: {
-      "src": "dist/images/at-the-fork-vr-portrait.png"
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "caption col-4"
-  }, [_c('h4', {
-    staticClass: "subtitle"
-  }, [_vm._v("At the Fork VR")]), _vm._v(" "), _c('p', [_vm._v("One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness about the living conditions of America's farm animals. We released the app in tandem with a feature documentary, a website (which I designed and built), and a marketing campaign. See the final version at "), _c('a', {
-    attrs: {
-      "target": "_blank",
-      "href": "http://attheforkfilm.com/app"
-    }
-  }, [_vm._v("At the Fork Film")]), _vm._v(", and my "), _c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("case-study here")]), _vm._v(".")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("The Blank Slate")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "why-both"
   }, [_c('div', {
     staticClass: "text"
   }, [_c('h2', {
     staticClass: "title"
-  }, [_vm._v("I design, build, & write — a lot.")]), _vm._v(" "), _c('p', [_vm._v("In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a "), _c('i', [_vm._v("lot")]), _vm._v(" more than designing.")]), _vm._v(" "), _c('p', [_vm._v("After four years in the industry, I’ve found that honing other skills makes me a much better designer and team player: learning how javascript routers work has made me a better information architect; playing with Vue.js has taught me the power of modularity and component-driven design; honing my writing has made me better at interviewing, and finding and communicating insights from user research; optimizing pages for load speed has made me better at making smarter tradeoffs between form and function; and spending hours working through code has made be a better colleague, communicator, and project manager (there is nothing quite so demoralizing as getting trapped in Dependency Hell, and nothing quite as frustrating as spending time on a feature that ultimately isn’t needed).")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("I design, build, & write — a lot.")]), _vm._v(" "), _c('p', [_vm._v("In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a "), _c('i', [_vm._v("lot")]), _vm._v(" more than designing.")]), _vm._v(" "), _c('p', [_vm._v("After four years in the industry, I’ve found that honing other skills makes me a much better designer and team player: learning how javascript routers work has made me a better information architect; playing with Vue.js has taught me the power of modularity and component-driven design; honing my writing has made me better at interviewing, and finding and communicating insights from user research; optimizing pages for load speed has made me better at making smart tradeoffs between form and function; and spending hours working through code has made be a better colleague, communicator, creative lead, and manager.")]), _vm._v(" "), _c('p', [_vm._v("Design is much more than making things beautiful; I see my job as a translator between user desires, client needs, budgets, timelines, technological capabilities, and visual design. There's nothing that really mitigates the frustration of debugging Dependency Hell in a wonky npm package, or sorting through 50 magically duplicated symbols in Sketch — but I've found that having colleageus who understand the challenges of your job, and who respect and empathize with what you do, is a kind of magic secret sauce that makes projects more fun, less stressful, and less prone to deadline-exploding misunderstandings of how features are supposed to work.")])]), _vm._v(" "), _c('div', {
     staticClass: "stack"
   }, [_c('h5', {
     staticClass: "subtitle"
@@ -33508,32 +33505,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "width": "20px",
       "src": "dist/images/noun_54427.png"
     }
-  }), _vm._v(").")]), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer @ Emergent Order")])]), _vm._v(" "), _c('p', [_vm._v("I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design projects on Virtual Reality apps, content site overhauls, organizational re-branding projects, and marketing campaigns.")])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "href": ""
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-cloud-download"
-  }), _vm._v("  Download Resume")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "latest"
-  }, [_c('h5', {
-    staticClass: "subtitle"
-  }, [_vm._v("Latest Posts")]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "text"
-  }, [_c('h2', {
-    staticClass: "title"
-  }, [_vm._v("Quick Project: Tracking video views in Airtable")]), _vm._v(" "), _c('p', [_vm._v("Emergent Order started life as a video production house. We’ve made award-winning documentaries, television ads, parody videos, mini-docs — oh, and music videos featuring rap battles between dead economists.")]), _vm._v(" "), _c('p', [_vm._v("As our list of multi-million-view hits grows, it’s become increasingly cumbersome to track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal database app, I decided to write a quick node.js script that aggregates our views for us.")])]), _vm._v(" "), _c('div', {
-    staticClass: "text"
-  }, [_c('h2', {
-    staticClass: "title"
-  }, [_c('a', {
-    attrs: {
-      "href": "/work/cat-merrick-studios"
-    }
-  }, [_vm._v("Cat Merrick Studios")])]), _vm._v(" "), _c('p', [_vm._v("UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — on purpose.")]), _vm._v(" "), _c('p', [_vm._v("Utterly baffling for me, a UX designer, whose entire job is about making things easy to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, “If you have to ask [how it works], you can’t afford it” — but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.")])])])])])
+  }), _vm._v(").")]), _vm._v(" "), _c('li', [_c('b', [_vm._v("UX + UI Designer @ Emergent Order")])]), _vm._v(" "), _c('p', [_vm._v("I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design projects on Virtual Reality apps, content site overhauls, organizational re-branding projects, and marketing campaigns.")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -33683,7 +33655,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('li', [_c('router-link', {
       staticClass: "skill-link",
       attrs: {
-        "to": '/work/' + w.slug
+        "to": 'work/' + w.slug
       }
     }, [_vm._v(_vm._s(_vm._f("humanize")(w.slug)))])], 1)
   })), _vm._v(" "), _c('div', {
@@ -33933,38 +33905,15 @@ var moment = __webpack_require__(0);
   name: 'hi',
   data: function data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      // msg: 'Welcome to Your Vue.js App'
     };
   },
 
+  // components: {'scrollactive' : ScrollActive},
   computed: {
     posts: function posts() {
-      var app = this;
-      var list = __webpack_require__(120);
-      var posts = [];
-
-      console.log(list);
-
-      for (var p = 0; p < list.length; p++) {
-        posts[p] = [];
-        posts[p].date = list[p].date;
-        console.log(list[p].path);
-
-        var s = __webpack_require__(147)("./" + list[p].path);
-
-        // Fix relative path issues with Marked's image import
-        var w = s.replace(new RegExp('\/images', 'g'), 'images');
-        var title = s.substring(s.indexOf('>') + 1, s.indexOf('</h1>'));
-
-        posts[p].title = title;
-        posts[p].slug = S(title).slugify();
-        posts[p].body = w;
-      }
-
-      return posts.sort(function (a, b) {
-        // Sort the posts most to least recent
-        return -moment(a.date).diff(moment(b.date));
-      });
+      var posts = __webpack_require__(165);
+      return posts;
     }
   },
   methods: {
@@ -33983,60 +33932,11 @@ var moment = __webpack_require__(0);
 });
 
 /***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./07-16-cms-less-and-it-feels-so-right.md": 148,
-	"./07-16-cms-less-and-it-feels-so-right/screen-1.png": 121,
-	"./07-16-cms-less-and-it-feels-so-right/screen-2.png": 122,
-	"./07-16-currently-reading-the-blank-slate.md": 149,
-	"./07-16-currently-reading-the-blank-slate/14316417206_4cc28f91a0_b.jpg": 123,
-	"./07-16-should-designers-learn-to-code.md": 150,
-	"./07-17-track-video-views-in-airtable.md": 151,
-	"./manifest.json": 120
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 147;
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = "<h1 id=\"a-blog-aware-ish-single-page-app-with-vue-js-and-bear-app\">A Blog-Aware-ish Single Page App with Vue.js and Bear App</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I’m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem 😍, but honestly, I also love learning new things, and I’m always going to consider whatever’s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn’t love free hosting, right?), but that… was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for “Wordpress-light”, but it requires PHP, and I’d honestly rather write in my own favorite markdown editor than in a browser.</p>\n<p><img src=\"" + __webpack_require__(121) + "\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren’t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you’re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn’t jazzed about the number of plugins I needed in order to have multiple different kinds of “posts,” and ultimately, I found myself missing my webpack-based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"" + __webpack_require__(122) + "\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> 😬</p>\n<p>Middleman was by far my favorite of the static-site generators — ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to include Vue elements, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n<p>So, with the help of <a href=\"https://www.npmjs.com/package/markdown-loader\">markdown-loader</a> that’s what I ended up doing.</p>\n<p>Since I try to keep my “Work” page pretty curated, it’s not hard to simply update the Vue component to grab another markdown file when I finish writing one. That file looks like this:</p>\n<pre><code>&lt;script&gt;\nexport default {\n  name: &#39;hi&#39;,\n  data () {\n    return {\n      index: [\n        &#39;cat-merrick-studios&#39;,\n        &#39;texas-millennial-institute&#39;,\n        // &#39;my-magic-mud&#39;, // &lt;-- coming soon!\n        &#39;social-evolution&#39;,\n        &#39;at-the-fork-virtual-reality&#39;,\n        // &#39;free-together&#39;\n      ]\n    }\n  },\n  computed: {\n    work: function() {\n      var app = this\n      var work = []\n\n      for (var i in app.index) {\n        var s = require(`../../../work/${app.index[i]}.md`)\n\n        // Fix relative path issues with Marked&#39;s image import\n        var w = s.replace(new RegExp(&#39;\\/images&#39;, &#39;g&#39;), &#39;images&#39;)\n\n        work[i] = { index: i, slug: app.index[i], body: w }\n      }\n      console.log(work)\n      return work\n    }\n  },\n  methods: {}\n}\n&lt;/script&gt;\n</code></pre><p>The blog is a little trickier: you don’t want your client-side javascript to be able to traverse a directory (for obvious security reasons), but there’s going to be enough content there that it’s going to get annoying to track individually.</p>\n<p>Since you <em>can</em> ask Webpack to do a little file-requiring during the build, as long as you explicitly tell it which files to grab, I wrote a simple node script that compiles a JSON directory of the blog posts and iterate through that during build:</p>\n<pre><code>var fs = require(&#39;graceful-fs&#39;)\nvar path = require(&#39;path&#39;)\nvar posts = []\n\nvar list = fs.readdirSync(&#39;./blog&#39;)\n\nfor (p in list) {\n  var filename = list[p]\n\n  // Only get markdown files, not folders\n  if (path.extname(filename) == &#39;.md&#39;) {\n    var stats = fs.statSync(&#39;./blog/&#39; + filename)\n    var date = stats.mtime\n\n    posts[p] = {}\n    posts[p].date = date\n    posts[p].path = filename\n  }\n}\n\nfs.writeFileSync(&#39;blog/manifest.json&#39;, JSON.stringify(posts))\n</code></pre><p>And, tada! Simple, fast, blog-aware-ish, vue-based site that lives on GitHub Pages.</p>\n<p>Next up, I’d like to add a blog-aware URL structure for Vue Router, so each post and work item can have it’s own permalink.</p>\n";
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = "<h1 id=\"currently-reading-the-blank-slate-\">Currently Reading: <em>The Blank Slate</em></h1>\n<ul>\n<li>cognitive science</li>\n<li>user experience design</li>\n</ul>\n<p><em>Link:</em> <a href=\"https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&amp;qid=1500250928&amp;sr=8-1&amp;keywords=the+blank+slate\">The Blank Slate: The Modern Denial of Human Nature</a></p>\n<p><img src=\"" + __webpack_require__(123) + "\" alt=\"\">\n<em>My man Pinker and his crazy, amazing hair. Source: <a href=\"https://c1.staticflickr.com/3/2918/14316417206_4cc28f91a0_b.jpg\">Flickr</a></em></p>\n";
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1 id=\"should-designers-learn-to-code-\">Should designers learn to code?</h1>\n<p>Yep. Yup. Yes. Definitely yes, absolutely yes, unquestionably yes. But in case you’re not convinced yet, here’s a few ways learning to code has made me a much better designer:</p>\n<h3 id=\"1-prototyping-in-html-js-and-css-is-honestly-sometimes-faster-\">1. Prototyping in HTML, JS and CSS is honestly sometimes faster.</h3>\n<p>Prototyping tools have gotten pretty drag and drop lately, and importing Sketch files into Invision, Marvel and Framer has become dreamily easy. </p>\n<p>But sometimes — especially when you’re designing animations or interactions — static prototypes just don’t cut it, and pulling out Adobe Illustrator and After Effects to show how selecting a filter will rearrange 30+ items on screen is going to take 20x longer than spinning up an index.html file, adding some CDN tags to jQuery and Masonry, and posting it on GitHub.</p>\n<p>Plus, when the inevitable question, “Ohhhhh I like that, but what if it was slower/blue/faded out, too?” comes does the line, I find that it’s much easier to jump into a text editor and swap out a few variables than to dive back into the animation workflow again.</p>\n<p>Plus, with tools like <a href=\"https://framer.com/\">Framer</a>, you can start doing some incredibly cool things:</p>\n<iframe class=framer src=http://share.framerjs.com/jdqn9z9hfor0/ width=“100%” height=“100%”></iframe>\n\n<h3 id=\"2-you-will-communicate-better-with-developers-and-you-will-make-their-lives-easier-and-people-like-it-when-you-make-their-lives-easier-\">2. You will communicate better with developers, and you will make their lives easier. And people like it when you make their lives easier.</h3>\n<p>Everyone’s had that moment when a design comes back from dev, and you think, “Oh.. that’s… not what I meant at all.”</p>\n<p>I’ve been on both sides of that conversation, and neither is fun.</p>\n<p>Discussing the pro’s and con’s of how best to build out particular interactions is hard, and it’s even harder when two sides of the conversation are speaking completely different languages. Knowing the difference between a hard refresh and an AJAX filter, or what the limitations are when it comes to front-end javascript, or scratching the surface of the amazing and seemingly infinite ways you can use CSS is going to make those conversations easier. Understanding how programs store and retrieve information makes you more cognizant of how that information is displayed, and in my case, has made be much much better at information architecture design.</p>\n<p>On top of which, knowing <em>roughly</em> how difficult it is to do something will save you tons of frustration in the long run: computers and humans fundamentally tackle problems in different ways, and it’s amazing how often things that intuitively seem very difficult are a breeze for a skilled developer. The reverse is also true: there are so, so many things that seem like they should be easy to do because humans are good at “fuzzy logic,” which are heinously complex for computers. </p>\n<p>In my experience, when you’re working against a budget for a client, being able to have intelligent conversations with developers about what’s “worth it” in terms of man hours vs. features that “would be awesome” will make or break your profitability. Having an understanding of how all the pieces fit together and what things are a “tall ask” has been crucial in working with developers to prioritize features that are low-cost and high-impact — instead of sending them off to slave away over something that could have been changed.</p>\n<p>Plus — developers are people, too. It can suck to work hard on something and not have anyone understand how complicated it was to pull off. Having another person on the project who really “gets it” is a special kind of motivation that keeps you going when you’ve been tracking down that incomprehensible dependency bug for four hours.</p>\n<h3 id=\"3-understanding-how-basic-programming-principles-work-is-the-difference-between-making-great-designs-and-making-completely-impossible-designs-\">3. Understanding how basic programming principles work is the difference between making great designs and making completely impossible designs.</h3>\n<p>Like a lot of front-end web developers, in the beginning, I struggled with the perennial question, “But which language should I learn?!” There are honestly so many things to learn, and so many new frameworks coming on the scene, that it gets complicated and overwhelming — fast.</p>\n<p>The good news is that as a designer, learning a little bit of whatever is interesting to you will be hugely beneficial. Ruby, PHP, Javascript, Go, Java — whatever. But taking the time to understand how computers “think” has been the difference between some of my best designs and some of my “Okay, well, that was an interesting idea, but it’s also <strong>completely</strong> insane.”</p>\n<h3 id=\"4-when-you-have-free-time-you-can-make-your-own-stuff-\">4. When you have free time, you can make your own stuff.</h3>\n";
-
-/***/ }),
-/* 151 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1 id=\"quick-project-tracking-video-views-in-airtable\">Quick Project: Tracking video views in Airtable</h1>\n<p><a href=\"http://www.emergentorder.com\">Emergent Order</a> started life as a video production house. We’ve made award-winning <a href=\"http://www.attheforkfilm.com\">documentaries</a>, television ads, <a href=\"www.artists4america.org/sharewars\">parody videos</a>, mini-docs — oh, and <a href=\"https://www.youtube.com/watch?v=GTQnarzmTOc\">music videos</a> featuring rap battles between dead economists.</p>\n<p>As our list of multi-million-view hits grows, it’s become increasingly cumbersome to  track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal <a href=\"www.airtable.com\">database app</a>, I decided to write a quick node.js script that aggregates our views for us.</p>\n<pre><code>// Pull API keys from the .env file\n// Hooray 12-factor best practices :)\nrequire(&#39;dotenv&#39;).config()\n\n/* --------------------------\n/* Initiate class libraries\n/* --------------------------\n/* Airtable\n/* YouTube\n/* jsonfile - for reading/writing json to datafiles\n/* VideoId - for pulling video ids from urls\n/* ------------------------- */\n\nvar Airtable = require(&#39;airtable&#39;)\nvar jsonfile = require(&#39;jsonfile&#39;)\nvar YouTube = require(&#39;youtube-node&#39;)\nconst getVideoId = require(&#39;get-video-id&#39;)\n\n// Init YouTube object &amp; authenticate\nvar youTube = new YouTube()\nyouTube.setKey(process.env.GOOGLE_API_KEY)\n\n// Ignore: JSON storage for testing\nvar data = &#39;data/views.json&#39;\n\n// Blank array to hold our Video data\nvar videos = []\n\n// Init our Airtable connection\nvar base = new Airtable({\n        apiKey: process.env.AIRTABLE_API_KEY\n    }).base(&#39;appjx8uwRv4srcesm&#39;);\n\n// Grab our table from our Airtable Base\nbase(&#39;Placements&#39;).select({\n    // maxRecords: 1,\n    filterByFormula: &quot;NOT({URL} = &#39;&#39;)&quot;\n}).eachPage(function page(records, fetchNextPage) {\n\n    // This function (`page`) will get called for each page of records.\n    records.forEach(function(record) {\n\n        // Get the video ID of each video &amp; the last (manually added) Viewcount\n        var video = getVideoId(record.get(&#39;URL&#39;))\n        var count = record.get(&#39;Viewcount&#39;)\n\n        // Create an empty placeholder video variable\n        var v = { video: video, views: count, newViews: &#39;&#39; }\n\n        // If the video is YouTube (getVideoId returns NOT undefined)\n        if (video) {\n\n          // Ask the YouTube API for stats pretty plz\n          youTube.getById(video[&#39;id&#39;], function (error, result) {\n\n            // If error, log it\n            if (error) {\n              console.log(error);\n            } else {\n\n              // If it&#39;s a YouTube playlist object, evaluate the first item in the list\n              if (result.items.length &gt; -1) {\n\n                // Change ViewCount (a string) into a number for Airtable\n                v.newViews = parseInt(result.items[0].statistics.viewCount)\n                // Add to videos array\n                videos.push(v)\n\n                // Write to JSON file for debugging\n                jsonfile.writeFile(data, videos, function(err) {\n                    console.error(err)\n                });\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n\n              } else {\n\n                // Otherwise just get the stats for this video\n                v.newViews = result.statistics.viewCount\n                videos.push(v)\n\n                // Update Airtable with new video count data\n                base(&#39;Placements&#39;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&#39;Viewcount&#39;));\n                });\n              }\n            }\n          })\n        }\n    });\n    fetchNextPage();\n});\n</code></pre>";
-
-/***/ }),
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
 /* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34058,7 +33958,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(_vm._f("date")(p.date)))]), _vm._v(" "), _c('div', {
       staticClass: "blog-body",
       domProps: {
-        "innerHTML": _vm._s(p.body)
+        "innerHTML": _vm._s(p.content)
       }
     })])
   }), _vm._v(" "), _c('div', {
@@ -34291,6 +34191,156 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(162),
+  /* template */
+  __webpack_require__(163),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/ellenbartling/projects/valet/portfolio/src/javascripts/pages/blog-single.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] blog-single.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-10a0694f", Component.options)
+  } else {
+    hotAPI.reload("data-v-10a0694f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 162 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+var _data = __webpack_require__(165);
+console.log(_data);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'hi',
+  data: function data() {
+    return {
+      allWork: _data
+    };
+  },
+
+  computed: {
+    blog: function blog() {
+      if (this.$route.params.slug) {
+        var s = this.$route.params.project;
+        console.log(s);
+      } else {
+        // Redirest to main Work page
+      }
+
+      function matchesSlug(el) {
+        console.log(el.slug);
+        return el.slug === s;
+      }
+
+      return _data.find(matchesSlug);
+    }
+  },
+  methods: {
+    onScrollDone: function onScrollDone() {}
+  },
+  mounted: function mounted() {
+    console.log("Highlight things on work");
+    $(document).ready(function () {
+      $('pre code').each(function (i, block) {
+        console.log("Highlighting " + block);
+        hljs.highlightBlock(block);
+      });
+    });
+
+    if (this.$route.params.project) {
+      this.$scrollTo('#' + this.$route.params.projects);
+    }
+  },
+  ready: function ready() {
+    $(document).ready(function () {
+      $('pre code').each(function (i, block) {
+        console.log("Highlighting " + block);
+        hljs.highlightBlock(block);
+      });
+    });
+  }
+});
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "work-single",
+    attrs: {
+      "id": "work"
+    }
+  }, [_c('div', {
+    staticClass: "body"
+  }, [(_vm.blog) ? _c('div', {
+    staticClass: "work-item",
+    attrs: {
+      "id": _vm.blog.slug
+    },
+    domProps: {
+      "innerHTML": _vm._s(_vm.blog.content)
+    }
+  }) : _vm._e()])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-10a0694f", module.exports)
+  }
+}
+
+/***/ }),
+/* 164 */,
+/* 165 */
+/***/ (function(module, exports) {
+
+module.exports = [{"date":"2017-07-17T16:24:05.000Z","slug":"Mon Jul 17 2017 11:24:05 GMT-0500 (CDT)-07-16-cms-less-and-it-feels-so-right","title":"A Blog-Aware-ish Single Page App with Vue.js and Bear App","tags":["front-end dev","productivity"],"content":"<html><head></head><body><h1 id=\"a-blog-aware-ish-single-page-app-with-vue-js-and-bear-app\">A Blog-Aware-ish Single Page App with Vue.js and Bear App</h1>\n<ul>\n<li>front-end dev</li>\n<li>productivity</li>\n</ul>\n<p>When it comes to Flat File CMSes vs. Static Site Generators vs. Wordpress vs. Squarespace vs. etc etc etc, I&#x2019;m something of a moderate. I have an admittedly huge crush on the <a href=\"https://laravel.com/\">Laravel</a> ecosystem &#x1F60D;, but honestly, I also love learning new things, and I&#x2019;m always going to consider whatever&#x2019;s best for the job. Every project has a different venn diagram of user needs, client needs, developer needs, and deployment complexities.</p>\n<p>When I decided to (finally) focus on making my own website, I knew I wanted to publish it on GitHub Pages (who doesn&#x2019;t love free hosting, right?), but that&#x2026; was about it. I knew I wanted to manage a fair amount of content, but Wordpress seemed like overkill for a few case studies and a blog. <a href=\"https://statamic.com/\">Statamic</a> is my go-to for &#x201C;Wordpress-light&#x201D;, but it requires PHP, and I&#x2019;d honestly rather write in my own favorite markdown editor than in a browser.</p>\n<p><img src=\"images/07-16-cms-less-and-it-feels-so-right/screen-1.png\" alt=\"\">\n<em>If you find yourself writing a lot of markdown, and you aren&#x2019;t using <a href=\"http://www.bear-writer.com/\">Bear App</a>, you&#x2019;re missing out.</em></p>\n<p>Lots of developers rave about Jekyll, and it comes with out of the box support from GitHub Pages, so I started there. I wasn&#x2019;t jazzed about the number of plugins I needed in order to have multiple different kinds of &#x201C;posts,&#x201D; and ultimately, I found myself missing my webpack-based workflow for building assets, and ended up trying a few other frameworks.</p>\n<p><img src=\"images/07-16-cms-less-and-it-feels-so-right/screen-2.png\" alt=\"\">\n<em>And by few, I guess I mean 7.</em> &#x1F62C;</p>\n<p>Middleman was by far my favorite of the static-site generators &#x2014; ruby-based like Jekyll, but way more flexible with its asset pipeline. But as I started to include Vue elements, I realized that Middleman, too, was kind of overkill. Eventually, I realized that all I really wanted was to import some markdown files into a handful of Vue components.</p>\n<p>So, with the help of <a href=\"https://www.npmjs.com/package/markdown-loader\">markdown-loader</a> that&#x2019;s what I ended up doing.</p>\n<p>Since I try to keep my &#x201C;Work&#x201D; page pretty curated, it&#x2019;s not hard to simply update the Vue component to grab another markdown file when I finish writing one. That file looks like this:</p>\n<pre><code>&lt;script&gt;\nexport default {\n  name: &apos;hi&apos;,\n  data () {\n    return {\n      index: [\n        &apos;cat-merrick-studios&apos;,\n        &apos;texas-millennial-institute&apos;,\n        // &apos;my-magic-mud&apos;, // &lt;-- coming soon!\n        &apos;social-evolution&apos;,\n        &apos;at-the-fork-virtual-reality&apos;,\n        // &apos;free-together&apos;\n      ]\n    }\n  },\n  computed: {\n    work: function() {\n      var app = this\n      var work = []\n\n      for (var i in app.index) {\n        var s = require(`../../../work/${app.index[i]}.md`)\n\n        // Fix relative path issues with Marked&apos;s image import\n        var w = s.replace(new RegExp(&apos;\\/images&apos;, &apos;g&apos;), &apos;images&apos;)\n\n        work[i] = { index: i, slug: app.index[i], body: w }\n      }\n      console.log(work)\n      return work\n    }\n  },\n  methods: {}\n}\n&lt;/script&gt;\n</code></pre><p>The blog is a little trickier: you don&#x2019;t want your client-side javascript to be able to traverse a directory (for obvious security reasons), but there&#x2019;s going to be enough content there that it&#x2019;s going to get annoying to track individually.</p>\n<p>Since you <em>can</em> ask Webpack to do a little file-requiring during the build, as long as you explicitly tell it which files to grab, I wrote a simple node script that compiles a JSON directory of the blog posts and iterate through that during build:</p>\n<pre><code>var fs = require(&apos;graceful-fs&apos;)\nvar path = require(&apos;path&apos;)\nvar posts = []\n\nvar list = fs.readdirSync(&apos;./blog&apos;)\n\nfor (p in list) {\n  var filename = list[p]\n\n  // Only get markdown files, not folders\n  if (path.extname(filename) == &apos;.md&apos;) {\n    var stats = fs.statSync(&apos;./blog/&apos; + filename)\n    var date = stats.mtime\n\n    posts[p] = {}\n    posts[p].date = date\n    posts[p].path = filename\n  }\n}\n\nfs.writeFileSync(&apos;blog/manifest.json&apos;, JSON.stringify(posts))\n</code></pre><p>And, tada! Simple, fast, blog-aware-ish, vue-based site that lives on GitHub Pages.</p>\n<p>Next up, I&#x2019;d like to add a blog-aware URL structure for Vue Router, so each post and work item can have it&#x2019;s own permalink.</p>\n</body></html>"},{"date":"2017-07-17T04:19:44.000Z","slug":"Sun Jul 16 2017 23:19:44 GMT-0500 (CDT)-07-16-currently-reading-the-blank-slate","title":"Currently Reading: <em>The Blank Slate</em>","tags":["cognitive science","user experience design"],"content":"<html><head></head><body><h1 id=\"currently-reading-the-blank-slate-\">Currently Reading: <em>The Blank Slate</em></h1>\n<ul>\n<li>cognitive science</li>\n<li>user experience design</li>\n</ul>\n<p><em>Link:</em> <a href=\"https://www.amazon.com/Blank-Slate-Modern-Denial-Nature-ebook/dp/B000QCTNIM/ref=sr_1_1?ie=UTF8&amp;qid=1500250928&amp;sr=8-1&amp;keywords=the+blank+slate\">The Blank Slate: The Modern Denial of Human Nature</a></p>\n<p><img src=\"images/07-16-currently-reading-the-blank-slate/14316417206_4cc28f91a0_b.jpg\" alt=\"\">\n<em>My man Pinker and his crazy, amazing hair. Source: <a href=\"https://c1.staticflickr.com/3/2918/14316417206_4cc28f91a0_b.jpg\">Flickr</a></em></p>\n</body></html>"},{"date":"2017-08-03T04:34:39.000Z","slug":"Wed Aug 02 2017 23:34:39 GMT-0500 (CDT)-07-17-track-video-views-in-airtable","title":"Quick Project: Tracking video views in Airtable","tags":[],"content":"<html><head></head><body><h1 id=\"quick-project-tracking-video-views-in-airtable\">Quick Project: Tracking video views in Airtable</h1>\n<p><a href=\"http://www.emergentorder.com\">Emergent Order</a> started life as a video production house. We&#x2019;ve made award-winning <a href=\"http://www.attheforkfilm.com\">documentaries</a>, television ads, <a href=\"www.artists4america.org/sharewars\">parody videos</a>, mini-docs &#x2014; oh, and <a href=\"https://www.youtube.com/watch?v=GTQnarzmTOc\">music videos</a> featuring rap battles between dead economists.</p>\n<p>As our list of multi-million-view hits grows, it&#x2019;s become increasingly cumbersome to  track exactly how many views EO content has gotten in aggregate &#x2014; so, with the help of our favorite internal <a href=\"www.airtable.com\">database app</a>, I decided to write a quick node.js script that aggregates our views for us.</p>\n<pre><code>// Pull API keys from the .env file\n// Hooray 12-factor best practices :)\nrequire(&apos;dotenv&apos;).config()\n\n/* --------------------------\n/* Initiate class libraries\n/* --------------------------\n/* Airtable\n/* YouTube\n/* jsonfile - for reading/writing json to datafiles\n/* VideoId - for pulling video ids from urls\n/* ------------------------- */\n\nvar Airtable = require(&apos;airtable&apos;)\nvar jsonfile = require(&apos;jsonfile&apos;)\nvar YouTube = require(&apos;youtube-node&apos;)\nconst getVideoId = require(&apos;get-video-id&apos;)\n\n// Init YouTube object &amp; authenticate\nvar youTube = new YouTube()\nyouTube.setKey(process.env.GOOGLE_API_KEY)\n\n// Ignore: JSON storage for testing\nvar data = &apos;data/views.json&apos;\n\n// Blank array to hold our Video data\nvar videos = []\n\n// Init our Airtable connection\nvar base = new Airtable({\n        apiKey: process.env.AIRTABLE_API_KEY\n    }).base(&apos;appjx8uwRv4srcesm&apos;);\n\n// Grab our table from our Airtable Base\nbase(&apos;Placements&apos;).select({\n    // maxRecords: 1,\n    filterByFormula: &quot;NOT({URL} = &apos;&apos;)&quot;\n}).eachPage(function page(records, fetchNextPage) {\n\n    // This function (`page`) will get called for each page of records.\n    records.forEach(function(record) {\n\n        // Get the video ID of each video &amp; the last (manually added) Viewcount\n        var video = getVideoId(record.get(&apos;URL&apos;))\n        var count = record.get(&apos;Viewcount&apos;)\n\n        // Create an empty placeholder video variable\n        var v = { video: video, views: count, newViews: &apos;&apos; }\n\n        // If the video is YouTube (getVideoId returns NOT undefined)\n        if (video) {\n\n          // Ask the YouTube API for stats pretty plz\n          youTube.getById(video[&apos;id&apos;], function (error, result) {\n\n            // If error, log it\n            if (error) {\n              console.log(error);\n            } else {\n\n              // If it&apos;s a YouTube playlist object, evaluate the first item in the list\n              if (result.items.length &gt; -1) {\n\n                // Change ViewCount (a string) into a number for Airtable\n                v.newViews = parseInt(result.items[0].statistics.viewCount)\n                // Add to videos array\n                videos.push(v)\n\n                // Write to JSON file for debugging\n                jsonfile.writeFile(data, videos, function(err) {\n                    console.error(err)\n                });\n\n                // Update Airtable with new video count data\n                base(&apos;Placements&apos;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&apos;Viewcount&apos;));\n                });\n\n              } else {\n\n                // Otherwise just get the stats for this video\n                v.newViews = result.statistics.viewCount\n                videos.push(v)\n\n                // Update Airtable with new video count data\n                base(&apos;Placements&apos;).update(record._rawJson.id, {\n                  &quot;NewViewcounts&quot;: v.newViews\n                }, function(err, record) {\n                    if (err) { console.error(err); return; }\n                    console.log(record.get(&apos;Viewcount&apos;));\n                });\n              }\n            }\n          })\n        }\n    });\n    fetchNextPage();\n});\n</code></pre></body></html>"}]
 
 /***/ })
 /******/ ]);

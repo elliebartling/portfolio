@@ -136,8 +136,9 @@
   justify-content center
   position relative
   img
-    max-height 90vh
-    margin-bottom 40px
+    // max-height 90vh
+    max-width 100%
+    margin-bottom 60px
   .caption
     // position relative
     // background white
@@ -161,12 +162,24 @@
     max-width 700px
 
 
-#hi-im-ellen .latest .subtitle
-  margin-bottom 40px
+#hi-im-ellen .latest .wrapper
+  display flex
+  justify-content flex-start
+  align-items flex-start
+  width 100%
+  margin auto
+  padding 10px
+  +above('s')
+    padding 60px
+    padding-top 30px
+  position relative
 
 #hi-im-ellen .latest .text
   max-width 100%
   width 100%
   margin-right 24px
-  +above('l')
-    max-width calc((6/12 * 100%) - 24px)
+  // +above('l')
+  //   max-width calc((6/12 * 100%) - 24px)
+
+#hi-im-ellen .latest .text:last-of-type
+  margin-right 0px

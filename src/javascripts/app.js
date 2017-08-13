@@ -72,6 +72,7 @@ const Hi = require('./pages/hi.vue')
 const Work = require('./pages/work.vue')
 const WorkSingle = require('./pages/work-single.vue')
 const Blog = require('./pages/blog.vue')
+const BlogSingle = require('./pages/blog-single.vue')
 
 
 const WorkSidebar = require('./pages/work-sidebar.vue')
@@ -87,7 +88,8 @@ const routes = [
   { path: '/hello', component: Hi },
   { path: '/work', component: Work },
   { path: '/work/:project', component: WorkSingle },
-  { path: '/blog', component: Blog }
+  { path: '/blog', component: Blog },
+  { path: '/blog/:slug', component: BlogSingle },
 ]
 
 // 3. Create the router instance and pass the `routes` option

@@ -9,7 +9,7 @@
         <h2 class="title">Hi, I’m Ellen</h2>
         <h4 class="subtitle">user experience designer + developer</h4>
 
-        <p>I help organizations engage their users and build their brands through <a href="work/at-the-fork">interactive design</a>. I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs.</p>
+        <p>I help organizations engage their users and build their brands through <router-link to="work/at-the-fork-virtual-reality">interactive design</router-link>. I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs.</p>
 
         <p>Currently, I work with an amazing team at an Austin, TX creative agency called <a target="_blank" href="http://www.emergentorder.com">Emergent Order</a> that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.</p>
 
@@ -20,7 +20,7 @@
       <img src="dist/images/at-the-fork-vr-portrait.png" />
       <div class="caption col-4">
         <h4 class="subtitle">At the Fork VR</h4>
-        <p>One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness about the living conditions of America's farm animals. We released the app in tandem with a feature documentary, a website (which I designed and built), and a marketing campaign. See the final version at <a target="_blank" href="http://attheforkfilm.com/app">At the Fork Film</a>, and my <a href="">case-study here</a>.</p>
+        <p>One of my favorite recent design projects: a 360-degree virtual reality app to promote awareness about the living conditions of America's farm animals. We released the app in tandem with a feature documentary, a website (which I designed and built), and a marketing campaign. See the final version at <a target="_blank" href="http://attheforkfilm.com/app">At the Fork Film</a>, and my <router-link to="work/at-the-fork-virtual-reality">case-study here</router-link>.</p>
       </div>
     </div>
     <div class="why-both">
@@ -28,7 +28,9 @@
         <h2 class="title">I design, build, & write &mdash; a lot.</h2>
         <p>In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a <i>lot</i> more than designing.</p>
 
-        <p>After four years in the industry, I’ve found that honing other skills makes me a much better designer and team player: learning how javascript routers work has made me a better information architect; playing with Vue.js has taught me the power of modularity and component-driven design; honing my writing has made me better at interviewing, and finding and communicating insights from user research; optimizing pages for load speed has made me better at making smarter tradeoffs between form and function; and spending hours working through code has made be a better colleague, communicator, and project manager (there is nothing quite so demoralizing as getting trapped in Dependency Hell, and nothing quite as frustrating as spending time on a feature that ultimately isn’t needed).</p>
+        <p>After four years in the industry, I’ve found that honing other skills makes me a much better designer and team player: learning how javascript routers work has made me a better information architect; playing with Vue.js has taught me the power of modularity and component-driven design; honing my writing has made me better at interviewing, and finding and communicating insights from user research; optimizing pages for load speed has made me better at making smart tradeoffs between form and function; and spending hours working through code has made be a better colleague, communicator, creative lead, and manager.</p>
+
+        <p>Design is much more than making things beautiful; I see my job as a translator between user desires, client needs, budgets, timelines, technological capabilities, and visual design. There's nothing that really mitigates the frustration of debugging Dependency Hell in a wonky npm package, or sorting through 50 magically duplicated symbols in Sketch &mdash; but I've found that having colleageus who understand the challenges of your job, and who respect and empathize with what you do, is a kind of magic secret sauce that makes projects more fun, less stressful, and less prone to deadline-exploding misunderstandings of how features are supposed to work.</p>
 
       </div>
       <div class="stack">
@@ -70,7 +72,7 @@
           <!-- <li><em>Emergent Order</em></li> -->
           <p>I started at Emergent Order as an assistant in video production, but quickly found my niche designing, building & managing interactive digital experiences. At EO, I've led design projects on Virtual Reality apps, content site overhauls, organizational re-branding projects, and marketing campaigns.</p>
         </ul>
-        <p><button href="" class="btn btn-primary"><i class="fa fa-cloud-download"></i>&nbsp;&nbsp;Download Resume</button></p>
+        <!-- <p><button href="" class="btn btn-primary"><i class="fa fa-cloud-download"></i>&nbsp;&nbsp;Download Resume</button></p> -->
       </div>
       <!-- <div class="bg-image">
         <img src="dist/images/noun_alien_900180.png">
@@ -78,23 +80,33 @@
     </div>
 
 
-    <div class="latest">
+    <!-- <div class="latest">
       <h5 class="subtitle">Latest Posts</h5>
-      <div class="row">
-        <div class="text">
-          <h2 class="title">Quick Project: Tracking video views in Airtable</h2>
-          <p>Emergent Order started life as a video production house. We’ve made award-winning documentaries, television ads, parody videos, mini-docs — oh, and music videos featuring rap battles between dead economists.</p>
 
-          <p>As our list of multi-million-view hits grows, it’s become increasingly cumbersome to track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal database app, I decided to write a quick node.js script that aggregates our views for us.</p>
-        </div>
-        <div class="text">
-          <h2 class="title"><a href="/work/cat-merrick-studios">Cat Merrick Studios</a></h2>
-          <p>UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — on purpose.</p>
+        <div class="wrapper">
+          <div class="text col-4">
+            <h2 class="title">Quick Project: Tracking video views in Airtable</h2>
+            <p>Emergent Order started life as a video production house. We’ve made award-winning documentaries, television ads, parody videos, mini-docs — oh, and music videos featuring rap battles between dead economists.</p>
 
-<p>Utterly baffling for me, a UX designer, whose entire job is about making things easy to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, “If you have to ask [how it works], you can’t afford it” — but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.</p>
+            <p>As our list of multi-million-view hits grows, it’s become increasingly cumbersome to track exactly how many views EO content has gotten in aggregate — so, with the help of our favorite internal database app, I decided to write a quick node.js script that aggregates our views for us.</p>
+            <a href="/blog">Keep reading</a>
+          </div>
+          <div class="text col-4">
+            <h2 class="title">Cat Merrick Studios</h2>
+            <p>UI design in the high-fashion world is very complex. As Cat — a super friendly, brilliant industrial designer who’s breaking into the jewelry scene later this year — explained to me, there is a very weird and nebulous line to balance between minimalism and usability. Sites are designed to be minimalist, sparse, and in some cases, outright confusing — on purpose.</p>
+
+            <p>Utterly baffling for me, a UX designer, whose entire job is about making things easy to use. The initial market research for this project was a bizarro, Alice-in-Wonder-Land-style journey into a world that really hinges on the model of, “If you have to ask [how it works], you can’t afford it” — but the more I dug, the more I realized that minimalism and hidden features were really important brand signals to the kinds of customers who might buy out your entire line.</p>
+
+            <a href="/work/cat-merrick-studios">Keep reading</a>
+          </div>
+          <div class="text col-4">
+            <h2 class='title'>Texas Millennial Institute</h2>
+            <p>There are a ton of public policy organizations that want to talk to Millennials; very few are actually run by millennials. When the founders of the Texas Millennial Institute decided they wanted to create their own non-profit and forge their own path (complete with a new brand identity), they knew one thing for certain: they didn’t want their audience to think they were boring, stale, or, worst of all, old.</p>
+            <a href="work/texas-millennial-institute">Keep reading</a>
+          </div>
         </div>
-      </div>
-    </div>
+
+    </div> -->
   </section>
 </template>
 
@@ -103,7 +115,7 @@ export default {
   name: 'hi',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   }
 }
